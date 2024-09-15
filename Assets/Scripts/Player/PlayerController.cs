@@ -6,31 +6,29 @@ public class PlayerController : MonoBehaviour
     #region input
     private PlayerControls _playerControls;
     private InputAction _move;
-    private InputAction _installBoom;
     #endregion 
-
 
     #region  animation
     private Animator _animator;
     private int _moveAnimId = Animator.StringToHash("move");
     private int _dirXHash = Animator.StringToHash("dirX");
     private int _dirYHash = Animator.StringToHash("dirY");
-
     #endregion
-
 
     #region attibute
     [SerializeField] private float _speed;
     private Vector3 _direction;
     #endregion
 
-
+    #region grid placement
+    [SerializeField] private Grid _mapGrid;
+    [SerializeField] private GameObject _cellIndicator;
+    #endregion
 
     private void Awake()
     {
         _playerControls = new PlayerControls();
         _move = _playerControls.Movement.Move;
-        _installBoom = _playerControls.Movement.Fire;
 
         _animator = GetComponent<Animator>();
     }
@@ -38,12 +36,17 @@ public class PlayerController : MonoBehaviour
     private void OnEnable()
     {
         _move.Enable();
-        _installBoom.Enable();
     }
 
     private void Update()
     {
         Move();
+        IndicateCellPosition();
+    }
+
+    private void OnFire()
+    {
+        Debug.Log("install a boom");
     }
 
     private void Move()
@@ -63,10 +66,15 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void IndicateCellPosition()
+    {
+        Vector3Int cellPos = _mapGrid.WorldToCell(transform.position);
+        Vector3 offset = Vector2.one * 0.5f;
+        _cellIndicator.transform.position = _mapGrid.CellToWorld(cellPos) + offset;
+    }
+
     private void OnDisable()
     {
         _move.Disable();
-        _installBoom.Disable();
     }
-
 }
