@@ -25,6 +25,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject _cellIndicator;
     #endregion
 
+
+    #region boom
+    [SerializeField] private GameObject _fireBall;
+    #endregion
+
     private void Awake()
     {
         _playerControls = new PlayerControls();
@@ -47,6 +52,8 @@ public class PlayerController : MonoBehaviour
     private void OnFire()
     {
         Debug.Log("install a boom");
+        if (_fireBall)
+            Instantiate(_fireBall, _cellIndicator.transform.position, Quaternion.identity);
     }
 
     private void Move()
