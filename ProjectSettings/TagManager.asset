@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Fireball
   - Explosion
+  - Item
   layers:
   - Default
   - TransparentFX

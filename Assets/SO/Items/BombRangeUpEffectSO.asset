@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ce19b97bc14ebb40978ac035f4dcad1, type: 3}
+  m_Name: BombRangeUpEffectSO
+  m_EditorClassIdentifier: 
+  _bombRangeUpEvent: {fileID: 11400000, guid: 6cffc8533026eb744b4144602b44606f, type: 2}

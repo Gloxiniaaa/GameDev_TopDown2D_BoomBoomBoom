@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc4a197da4cfc004883c5ac80a169f80, type: 3}
+  m_Name: PlayerAttribute
+  m_EditorClassIdentifier: 
+  _initSpeed: 3
+  _initBombAmount: 3
+  Speed: 3
+  BombAmount: 3
+  BombPrefab: {fileID: 6377980875007430283, guid: d323983949e055340b53f1034a543e5a, type: 3}
+  _speedupEvent: {fileID: 11400000, guid: b5ae461c9ca6dca4f902e34ebc329368, type: 2}

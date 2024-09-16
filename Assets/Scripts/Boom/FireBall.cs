@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class FireBall : MonoBehaviour
 {
-    [SerializeField] private float _countDownTime;
-    [SerializeField] private GameObject _explosionPrefab;
-    private int _range = 3;
+    [SerializeField] private BombAttributeSO _bombAttribute;
     private List<GameObject> _explosions;
     private bool _isExploded = false;
 
@@ -18,15 +16,15 @@ public class FireBall : MonoBehaviour
     private void OnEnable()
     {
         BubbleEffect();
-        Invoke(nameof(Explode), _countDownTime);
+        Invoke(nameof(Explode), _bombAttribute.CountDownTime);
     }
 
     private void Initilize()
     {
-        _explosions = new List<GameObject>(_range * 4 + 1);
-        for (int i = 0; i < _range * 4 + 1; i++)
+        _explosions = new List<GameObject>(_bombAttribute.Range * 4 + 1);
+        for (int i = 0; i < _bombAttribute.Range * 4 + 1; i++)
         {
-            GameObject explosion = Instantiate(_explosionPrefab);
+            GameObject explosion = Instantiate(_bombAttribute.ExplosionPrefab);
             explosion.SetActive(false);
             _explosions.Add(explosion);
         }
@@ -52,7 +50,7 @@ public class FireBall : MonoBehaviour
         _explosions[index].SetActive(true);
         _explosions[index++].transform.position = new Vector2(transform.position.x, transform.position.y);
 
-        for (int i = 0; i < _range; i++)
+        for (int i = 0; i < _bombAttribute.Range; i++)
         {
             // up
             _explosions[index].SetActive(true);

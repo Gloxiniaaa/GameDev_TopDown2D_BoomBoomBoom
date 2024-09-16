@@ -4,4 +4,5 @@ public class Constant
 {
     public const string FireBallTag = "Fireball";
     public const string PlayerTag = "Player";
+    public const string ItemTag = "Item";
 }

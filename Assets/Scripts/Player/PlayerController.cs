@@ -7,7 +7,6 @@ public class PlayerController : MonoBehaviour
     #region input
     private PlayerControls _playerControls;
     private InputAction _move;
-    [SerializeField] private LayerMask _solidLayer;
     #endregion 
 
     #region  animation
@@ -18,19 +17,16 @@ public class PlayerController : MonoBehaviour
     #endregion
 
     #region attibute
-    [SerializeField] private float _speed;
+    [SerializeField] private PlayerAttributeSO _playerAttribute;
     private Vector3 _direction = Vector3.zero;
     #endregion
 
     #region grid placement
     [SerializeField] private Grid _mapGrid;
     [SerializeField] private GameObject _cellIndicator;
+    [SerializeField] private LayerMask _solidLayer;
     private Vector3 _nextCell;
     private RaycastHit2D _obstacleDetector => Physics2D.Raycast(_nextCell, _direction, 0.1f, _solidLayer);
-    #endregion
-
-    #region boom
-    [SerializeField] private GameObject _fireBall;
     #endregion
 
     private void Awake()
@@ -54,15 +50,12 @@ public class PlayerController : MonoBehaviour
 
     private void OnFire()
     {
-        if (_fireBall)
+        if (_obstacleDetector.collider && _obstacleDetector.collider.CompareTag("Fireball"))
         {
-            if (_obstacleDetector.collider && _obstacleDetector.collider.CompareTag("Fireball"))
-            {
-                Debug.Log("this cell is already installed a boom");
-                return;
-            }
-            GameObject fireBall = Instantiate(_fireBall, _cellIndicator.transform.position, Quaternion.identity);
+            Debug.Log("this cell is already installed a boom");
+            return;
         }
+        GameObject fireBall = Instantiate(_playerAttribute.BombPrefab, _cellIndicator.transform.position, Quaternion.identity);
     }
 
     private void OnMove()
@@ -80,7 +73,7 @@ public class PlayerController : MonoBehaviour
             _animator.SetFloat(_dirXHash, _direction.x);
             _animator.SetFloat(_dirYHash, _direction.y);
             if (IsNextCellAvailable())
-                transform.position += _direction * _speed * Time.deltaTime;
+                transform.position += _direction * _playerAttribute.Speed * Time.deltaTime;
         }
         else
         {
