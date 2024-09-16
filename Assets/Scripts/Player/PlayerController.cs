@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
     #region input
     private PlayerControls _playerControls;
     private InputAction _move;
+    [SerializeField] private LayerMask _solidLayer;
     #endregion 
 
     #region  animation
@@ -17,14 +18,15 @@ public class PlayerController : MonoBehaviour
 
     #region attibute
     [SerializeField] private float _speed;
-    private Vector3 _direction;
+    private Vector3 _direction = Vector3.zero;
     #endregion
 
     #region grid placement
     [SerializeField] private Grid _mapGrid;
     [SerializeField] private GameObject _cellIndicator;
+    private Vector3 _nextCell;
+    private RaycastHit2D _obstacleDetector => Physics2D.Raycast(_nextCell, _direction, 0.1f, _solidLayer);
     #endregion
-
 
     #region boom
     [SerializeField] private GameObject _fireBall;
@@ -53,8 +55,17 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log("install a boom");
         if (_fireBall)
-            Instantiate(_fireBall, _cellIndicator.transform.position, Quaternion.identity);
+        {
+            GameObject fireBall = Instantiate(_fireBall, _cellIndicator.transform.position, Quaternion.identity);
+            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), fireBall.GetComponent<Collider2D>());
+        }
     }
+
+    private void OnMove()
+    {
+        _animator.SetBool(_moveAnimId, true);
+    }
+
 
     private void Move()
     {
@@ -64,8 +75,8 @@ public class PlayerController : MonoBehaviour
         {
             _animator.SetFloat(_dirXHash, _direction.x);
             _animator.SetFloat(_dirYHash, _direction.y);
-            _animator.SetBool(_moveAnimId, true);
-            transform.position = Vector2.MoveTowards(transform.position, transform.position + _direction, 0.01f * _speed);
+            if (IsNextCellAvailable())
+                transform.position = Vector2.MoveTowards(transform.position, transform.position + _direction, 0.01f * _speed);
         }
         else
         {
@@ -78,6 +89,22 @@ public class PlayerController : MonoBehaviour
         Vector3Int cellPos = _mapGrid.WorldToCell(transform.position);
         Vector3 offset = Vector2.one * 0.5f;
         _cellIndicator.transform.position = _mapGrid.CellToWorld(cellPos) + offset;
+    }
+
+    private bool IsNextCellAvailable()
+    {
+        Vector3Int nextCell = _mapGrid.WorldToCell(transform.position + _direction * 0.4f);
+        Vector3 offset = Vector2.one * 0.5f;
+        _nextCell = _mapGrid.CellToWorld(nextCell) + offset;
+        Collider2D obstacle = _obstacleDetector.collider;
+        if (obstacle)
+        {
+            return obstacle.transform.position == _cellIndicator.transform.position;
+        }
+        else
+        {
+            return true;
+        }
     }
 
     private void OnDisable()
