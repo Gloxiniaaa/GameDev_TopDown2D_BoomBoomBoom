@@ -130,7 +130,6 @@ GameObject:
   - component: {fileID: 3627443581340938096}
   - component: {fileID: 8202633336974619670}
   - component: {fileID: 674601483326732109}
-  - component: {fileID: 5760332026968724505}
   m_Layer: 0
   m_Name: Anim
   m_TagString: Untagged
@@ -193,7 +192,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 1
   m_Sprite: {fileID: 427097130, guid: a5b0e86863aa0014e89e4f770b54f059, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -204,7 +203,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!95 &674601483326732109
 Animator:
   serializedVersion: 5
@@ -226,16 +225,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &5760332026968724505
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8492407239751482001}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2258ca48ed6c6446b718ad82cdb07a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delObj: {fileID: 7816949675227772750}

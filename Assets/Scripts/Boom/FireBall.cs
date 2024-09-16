@@ -2,12 +2,13 @@ using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 
-public class Boom : MonoBehaviour
+public class FireBall : MonoBehaviour
 {
     [SerializeField] private float _countDownTime;
     [SerializeField] private GameObject _explosionPrefab;
     private int _range = 3;
     private List<GameObject> _explosions;
+    private bool _isExploded = false;
 
     private void Awake()
     {
@@ -41,6 +42,10 @@ public class Boom : MonoBehaviour
 
     public void Explode()
     {
+        if (_isExploded)
+            return;
+        
+        _isExploded = true;
         int index = 0;
 
         // center

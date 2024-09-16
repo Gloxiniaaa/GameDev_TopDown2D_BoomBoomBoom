@@ -4,17 +4,23 @@ using UnityEngine;
 
 public class Explosion : MonoBehaviour
 {
-    private void OnTriggerStay2D(Collider2D other) {
-        
-        if(other.gameObject.CompareTag("Fireball")){
-            BoomEffect activeBoom = other.GetComponent<BoomEffect>();
-            if(activeBoom != null){
-                activeBoom.explosion();
-                activeBoom.deleteObj();
-            }
-            
-        }
-        
+    private void OnEnable()
+    {
+        Invoke(nameof(Deactivate), 0.3f);
     }
-    
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag(Constant.FireBallTag))
+        {
+            // for chain explosion
+            FireBall otherBomb = other.GetComponent<FireBall>();
+            otherBomb.Explode();
+        }
+    }
+
+    private void Deactivate()
+    {
+        gameObject.SetActive(false);
+    }
 }
