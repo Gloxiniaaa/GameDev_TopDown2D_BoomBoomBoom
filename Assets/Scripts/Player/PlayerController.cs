@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -56,7 +57,7 @@ public class PlayerController : MonoBehaviour
         Debug.Log("install a boom");
         if (_fireBall)
         {
-            GameObject fireBall = Instantiate(_fireBall, _cellIndicator.transform.position, Quaternion.identity);
+            GameObject fireBall = Instantiate(_fireBall, new Vector2(_cellIndicator.transform.position.x, _cellIndicator.transform.position.y - 0.2f), Quaternion.identity);
             Physics2D.IgnoreCollision(GetComponent<Collider2D>(), fireBall.GetComponent<Collider2D>());
         }
     }
@@ -111,4 +112,6 @@ public class PlayerController : MonoBehaviour
     {
         _move.Disable();
     }
+
+    
 }
