@@ -54,11 +54,14 @@ public class PlayerController : MonoBehaviour
 
     private void OnFire()
     {
-        Debug.Log("install a boom");
         if (_fireBall)
         {
-            GameObject fireBall = Instantiate(_fireBall, new Vector2(_cellIndicator.transform.position.x, _cellIndicator.transform.position.y - 0.2f), Quaternion.identity);
-            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), fireBall.GetComponent<Collider2D>());
+            if (_obstacleDetector.collider && _obstacleDetector.collider.CompareTag("Fireball"))
+            {
+                Debug.Log("this cell is already installed a boom");
+                return;
+            }
+            GameObject fireBall = Instantiate(_fireBall, _cellIndicator.transform.position, Quaternion.identity);
         }
     }
 
@@ -77,7 +80,7 @@ public class PlayerController : MonoBehaviour
             _animator.SetFloat(_dirXHash, _direction.x);
             _animator.SetFloat(_dirYHash, _direction.y);
             if (IsNextCellAvailable())
-                transform.position = Vector2.MoveTowards(transform.position, transform.position + _direction, 0.01f * _speed);
+                transform.position += _direction * _speed * Time.deltaTime;
         }
         else
         {
@@ -112,6 +115,4 @@ public class PlayerController : MonoBehaviour
     {
         _move.Disable();
     }
-
-    
 }
