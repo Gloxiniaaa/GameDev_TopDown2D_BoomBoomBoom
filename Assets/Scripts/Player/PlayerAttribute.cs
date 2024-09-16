@@ -11,12 +11,14 @@ public class PlayerAttributeSO : ScriptableObject
 
     [Header("Listen on channel:")]
     [SerializeField] private FloatEventChannelSO _speedupEvent;
+    [SerializeField] private IntEventChannelSO _bombAmountUpEvent;
 
     private void OnEnable()
     {
         Speed = _initSpeed;
         BombAmount = _initBombAmount;
         _speedupEvent.OnEventRaised += IncreaseSpeed;
+        _bombAmountUpEvent.OnEventRaised += IncreaseBombAmount;
     }
 
     private void IncreaseSpeed(float amount)
@@ -24,8 +26,14 @@ public class PlayerAttributeSO : ScriptableObject
         Speed += amount;
     }
 
+    private void IncreaseBombAmount(int amount)
+    {
+        BombAmount += amount;
+    }
+
     private void OnDisable()
     {
         _speedupEvent.OnEventRaised -= IncreaseSpeed;
+        _bombAmountUpEvent.OnEventRaised -= IncreaseBombAmount;
     }
 }

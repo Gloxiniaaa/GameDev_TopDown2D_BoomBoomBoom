@@ -9,13 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc4a197da4cfc004883c5ac80a169f80, type: 3}
-  m_Name: PlayerAttribute
+  m_Script: {fileID: 11500000, guid: ae4f4835412053d4da65ce007514c4a9, type: 3}
+  m_Name: BombAmountUp
   m_EditorClassIdentifier: 
-  _initSpeed: 3
-  _initBombAmount: 3
-  Speed: 3
-  BombAmount: 3
-  BombPrefab: {fileID: 6377980875007430283, guid: d323983949e055340b53f1034a543e5a, type: 3}
-  _speedupEvent: {fileID: 11400000, guid: b5ae461c9ca6dca4f902e34ebc329368, type: 2}
   _bombAmountUpEvent: {fileID: 11400000, guid: d88473aeb93409842b0443b656e734da, type: 2}

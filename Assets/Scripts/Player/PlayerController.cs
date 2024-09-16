@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -29,6 +30,11 @@ public class PlayerController : MonoBehaviour
     private RaycastHit2D _obstacleDetector => Physics2D.Raycast(_nextCell, _direction, 0.1f, _solidLayer);
     #endregion
 
+    #region bomb
+    [SerializeField] private BombBag _bombBag;
+    #endregion
+
+
     private void Awake()
     {
         _playerControls = new PlayerControls();
@@ -55,7 +61,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("this cell is already installed a boom");
             return;
         }
-        GameObject fireBall = Instantiate(_playerAttribute.BombPrefab, _cellIndicator.transform.position, Quaternion.identity);
+        _bombBag.InstallBomb(_cellIndicator.transform.position);
     }
 
     private void OnMove()

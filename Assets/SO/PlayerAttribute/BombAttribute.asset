@@ -12,10 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 423b89e180c248246a07dcac671633ef, type: 3}
   m_Name: BombAttribute
   m_EditorClassIdentifier: 
-  description: 
   _initCoutDownTime: 3
-  _initRange: 2
+  _initRange: 1
   CountDownTime: 3
-  Range: 2
+  Range: 3
   ExplosionPrefab: {fileID: 7816949675227772750, guid: f28ba1a2217a3e64a9d2641db80c6c86, type: 3}
   _bombRangeUpEvent: {fileID: 11400000, guid: 6cffc8533026eb744b4144602b44606f, type: 2}

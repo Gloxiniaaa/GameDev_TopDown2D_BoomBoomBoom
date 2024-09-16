@@ -198,3 +198,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bombAttribute: {fileID: 11400000, guid: ebe0516e05db2a940809d73b8c2d0cd7, type: 2}
+  _returnBombToPoolChannel: {fileID: 11400000, guid: c8c1e5a801ed8e445be3cf63b2516be4, type: 2}

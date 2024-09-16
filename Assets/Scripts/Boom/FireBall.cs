@@ -8,6 +8,9 @@ public class FireBall : MonoBehaviour
     private List<GameObject> _explosions;
     private bool _isExploded = false;
 
+    [Header("Broadcast on channel:")]
+    [SerializeField] private GameObjectEventChannelSO _returnBombToPoolChannel;
+
     private void Awake()
     {
         Initilize();
@@ -15,6 +18,7 @@ public class FireBall : MonoBehaviour
 
     private void OnEnable()
     {
+        _isExploded = false;
         BubbleEffect();
         Invoke(nameof(Explode), _bombAttribute.CountDownTime);
     }
@@ -42,7 +46,7 @@ public class FireBall : MonoBehaviour
     {
         if (_isExploded)
             return;
-        
+
         _isExploded = true;
         int index = 0;
 
@@ -52,7 +56,15 @@ public class FireBall : MonoBehaviour
 
         for (int i = 0; i < _bombAttribute.Range; i++)
         {
-            // up
+            if (index < _bombAttribute.Range * 4 + 1)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    GameObject explosion = Instantiate(_bombAttribute.ExplosionPrefab);
+                    explosion.SetActive(false);
+                    _explosions.Add(explosion);
+                }
+            }
             _explosions[index].SetActive(true);
             _explosions[index++].transform.position = new Vector2(transform.position.x, transform.position.y + i + 1);
             // down
@@ -71,6 +83,7 @@ public class FireBall : MonoBehaviour
     private void AfterExlode()
     {
         transform.DOKill();
+        _returnBombToPoolChannel.RaiseEvent(gameObject);
         gameObject.SetActive(false);
     }
 }
