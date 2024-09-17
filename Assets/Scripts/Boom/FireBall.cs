@@ -6,6 +6,7 @@ using UnityEngine;
 public class FireBall : MonoBehaviour
 {
     [SerializeField] private BombAttributeSO _bombAttribute;
+    [SerializeField] private AudioGroupSO _explodeSfx;
     private List<GameObject> _explosions;
     private int _explosionIndex = 0;
 
@@ -13,6 +14,7 @@ public class FireBall : MonoBehaviour
 
     [Header("Broadcast on channel:")]
     [SerializeField] private GameObjectEventChannelSO _returnBombToPoolChannel;
+    [SerializeField] private AudioEventChannelSO _sfxChannel;
 
     private void Awake()
     {
@@ -57,11 +59,11 @@ public class FireBall : MonoBehaviour
             return;
 
         _isExploded = true;
+        _sfxChannel.RaiseEvent(_explodeSfx);
 
         // center
         _explosions[_explosionIndex].SetActive(true);
         _explosions[_explosionIndex++].transform.position = new Vector2(transform.position.x, transform.position.y);
-
         ExtendExplosion(Vector2.up);
         ExtendExplosion(Vector2.down);
         ExtendExplosion(Vector2.right);

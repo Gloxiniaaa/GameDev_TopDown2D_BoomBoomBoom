@@ -4,10 +4,10 @@ using UnityEngine;
 public class AudioGroupSO : ScriptableObject
 {
     [SerializeField] AudioClip[] _audioClips;
-    public float Volume;
-    
+    [Range(0f, 1f)] public float Volume;
+
     public AudioClip GetRandomClip()
     {
         return _audioClips[Random.Range(0, _audioClips.Length)];
     }
-}   
+}
