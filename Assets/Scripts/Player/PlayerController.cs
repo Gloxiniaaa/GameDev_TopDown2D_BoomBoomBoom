@@ -25,9 +25,8 @@ public class PlayerController : MonoBehaviour
     #region grid placement
     [SerializeField] private Grid _mapGrid;
     [SerializeField] private GameObject _cellIndicator;
-    [SerializeField] private LayerMask _solidLayer;
     private Vector3 _nextCell;
-    private RaycastHit2D _obstacleDetector => Physics2D.Raycast(_nextCell, _direction, 0.1f, _solidLayer);
+    private RaycastHit2D _obstacleDetector => Physics2D.Raycast(_nextCell, _direction, 0.1f, 1 << Constant.SolidLayer);
     #endregion
 
     #region bomb
@@ -114,7 +113,8 @@ public class PlayerController : MonoBehaviour
     {
         if (other.CompareTag(Constant.ExplosionTag))
         {
-            Debug.Log("player is damaged by a bomb");
+            if (other.transform.position == _cellIndicator.transform.position)
+                Debug.Log("player is damaged by a bomb");
         }
     }
     private void OnDisable()

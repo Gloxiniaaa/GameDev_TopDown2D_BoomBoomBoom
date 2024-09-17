@@ -7,6 +7,8 @@ public class FireBall : MonoBehaviour
 {
     [SerializeField] private BombAttributeSO _bombAttribute;
     private List<GameObject> _explosions;
+    private int _explosionIndex = 0;
+
     private bool _isExploded = false;
 
     [Header("Broadcast on channel:")]
@@ -55,15 +57,23 @@ public class FireBall : MonoBehaviour
             return;
 
         _isExploded = true;
-        int index = 0;
 
         // center
-        _explosions[index].SetActive(true);
-        _explosions[index++].transform.position = new Vector2(transform.position.x, transform.position.y);
+        _explosions[_explosionIndex].SetActive(true);
+        _explosions[_explosionIndex++].transform.position = new Vector2(transform.position.x, transform.position.y);
 
+        ExtendExplosion(Vector2.up);
+        ExtendExplosion(Vector2.down);
+        ExtendExplosion(Vector2.right);
+        ExtendExplosion(Vector2.left);
+        AfterExlode();
+    }
+
+    private void ExtendExplosion(Vector3 direction)
+    {
         for (int i = 0; i < _bombAttribute.Range; i++)
         {
-            if (index < _bombAttribute.Range * 4 + 1)
+            if (_explosionIndex < _bombAttribute.Range * 4 + 1)
             {
                 for (int j = 0; j < 4; j++)
                 {
@@ -72,25 +82,22 @@ public class FireBall : MonoBehaviour
                     _explosions.Add(explosion);
                 }
             }
-            _explosions[index].SetActive(true);
-            _explosions[index++].transform.position = new Vector2(transform.position.x, transform.position.y + i + 1);
-            // down
-            _explosions[index].SetActive(true);
-            _explosions[index++].transform.position = new Vector2(transform.position.x, transform.position.y - i - 1);
-            // right
-            _explosions[index].SetActive(true);
-            _explosions[index++].transform.position = new Vector2(transform.position.x + i + 1, transform.position.y);
-            // left
-            _explosions[index].SetActive(true);
-            _explosions[index++].transform.position = new Vector2(transform.position.x - i - 1, transform.position.y);
+            _explosions[_explosionIndex].SetActive(true);
+            _explosions[_explosionIndex++].transform.position = transform.position + direction * (i + 1);
+            
+            RaycastHit2D obstacleDetector = Physics2D.Raycast(transform.position + direction * (i + 1), direction, 0.1f, 1 << Constant.SolidLayer);
+            if (obstacleDetector.collider)
+            {
+                break;
+            }
         }
-        AfterExlode();
     }
 
     private void AfterExlode()
     {
         transform.DOKill();
         _returnBombToPoolChannel.RaiseEvent(gameObject);
+        _explosionIndex = 0;
         gameObject.SetActive(false);
     }
 }
