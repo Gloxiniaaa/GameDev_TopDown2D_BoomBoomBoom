@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4356539803603220097}
   - component: {fileID: 80318306253697490}
+  - component: {fileID: 3081591005445637633}
   m_Layer: 3
   m_Name: BigBush
   m_TagString: Destroyable
@@ -78,6 +79,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &3081591005445637633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4248315620191855488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24320ae874331514b93a31e5affeee10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hiddenItem: {fileID: 0}
 --- !u!1 &6997799232779429199
 GameObject:
   m_ObjectHideFlags: 0
