@@ -82,13 +82,21 @@ public class FireBall : MonoBehaviour
                     _explosions.Add(explosion);
                 }
             }
-            _explosions[_explosionIndex].SetActive(true);
-            _explosions[_explosionIndex++].transform.position = transform.position + direction * (i + 1);
-            
+
             RaycastHit2D obstacleDetector = Physics2D.Raycast(transform.position + direction * (i + 1), direction, 0.1f, 1 << Constant.SolidLayer);
             if (obstacleDetector.collider)
             {
-                break;
+                if (obstacleDetector.collider.CompareTag(Constant.DestroyableTag) || obstacleDetector.collider.CompareTag(Constant.FireBallTag))
+                {
+                    _explosions[_explosionIndex].SetActive(true);
+                    _explosions[_explosionIndex++].transform.position = transform.position + direction * (i + 1);
+                }
+                return;
+            }
+            else
+            {
+                _explosions[_explosionIndex].SetActive(true);
+                _explosions[_explosionIndex++].transform.position = transform.position + direction * (i + 1);
             }
         }
     }
