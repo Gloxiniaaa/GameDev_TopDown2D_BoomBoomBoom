@@ -15,7 +15,7 @@ TagManager:
   - Solid
   - Water
   - UI
-  - 
+  - Item
   - 
   - 
   - 
@@ -47,4 +47,7 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Floating
+    uniqueID: 2650610589
     locked: 0
