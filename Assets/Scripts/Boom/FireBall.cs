@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
@@ -20,7 +21,7 @@ public class FireBall : MonoBehaviour
     {
         _isExploded = false;
         BubbleEffect();
-        Invoke(nameof(Explode), _bombAttribute.CountDownTime);
+        StartCoroutine(StartCountDown());
     }
 
     private void Initilize()
@@ -40,6 +41,12 @@ public class FireBall : MonoBehaviour
         sequence.Append(transform.DOScaleY(0.9f, 0.2f).SetEase(Ease.InOutQuad));
         sequence.Append(transform.DOScaleY(1.1f, 0.2f).SetEase(Ease.InOutQuad));
         sequence.SetLoops(-1, LoopType.Yoyo);
+    }
+
+    private IEnumerator StartCountDown()
+    {
+        yield return new WaitForSeconds(_bombAttribute.CountDownTime);
+        Explode();
     }
 
     public void Explode()
