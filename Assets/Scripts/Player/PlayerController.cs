@@ -110,6 +110,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag(Constant.ExplosionTag))
+        {
+            Debug.Log("player is damaged by a bomb");
+        }
+    }
     private void OnDisable()
     {
         _move.Disable();
