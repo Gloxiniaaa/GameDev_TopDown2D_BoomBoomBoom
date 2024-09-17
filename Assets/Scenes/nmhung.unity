@@ -3479,6 +3479,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerAttribute: {fileID: 11400000, guid: 6310e2075731f3941856f35dfdbf556b, type: 2}
+  _bombInstallSfx: {fileID: 11400000, guid: cf3f61acdf4268545bcc6fd490f819a3, type: 2}
+  _sfxChannel: {fileID: 11400000, guid: 147d38e6949e40b448f56a903cde74bf, type: 2}
   _returnBombToPoolChannel: {fileID: 11400000, guid: c8c1e5a801ed8e445be3cf63b2516be4, type: 2}
 --- !u!1 &1816934687
 GameObject:
@@ -3490,7 +3492,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1816934688}
   m_Layer: 0
-  m_Name: Destroyable
+  m_Name: Destroyables
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3600,7 +3602,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2097162750}
   m_Layer: 0
-  m_Name: Obstacle
+  m_Name: Obstacles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4571,10 +4573,10 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 477062988}
   - {fileID: 981004244}
+  - {fileID: 1438607447}
   - {fileID: 499023854}
   - {fileID: 831682893}
   - {fileID: 856163178}
   - {fileID: 1816934688}
   - {fileID: 1458374905}
   - {fileID: 2097162750}
-  - {fileID: 1438607447}

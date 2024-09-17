@@ -93,6 +93,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _itemEffect: {fileID: 11400000, guid: c28d0f6eb311a2e4d9db3980b0e25d86, type: 2}
+  _collectSfx: {fileID: 11400000, guid: faa63bd50d8828c4d869f56fd11b3bc7, type: 2}
+  _sfxChannel: {fileID: 11400000, guid: 147d38e6949e40b448f56a903cde74bf, type: 2}
 --- !u!212 &4768753705091802784
 SpriteRenderer:
   m_ObjectHideFlags: 0

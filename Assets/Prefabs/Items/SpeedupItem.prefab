@@ -145,6 +145,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _itemEffect: {fileID: 11400000, guid: f5129a1b04b42084387202683fe06efe, type: 2}
+  _collectSfx: {fileID: 11400000, guid: faa63bd50d8828c4d869f56fd11b3bc7, type: 2}
+  _sfxChannel: {fileID: 11400000, guid: 147d38e6949e40b448f56a903cde74bf, type: 2}
 --- !u!50 &2811898717069096898
 Rigidbody2D:
   serializedVersion: 4

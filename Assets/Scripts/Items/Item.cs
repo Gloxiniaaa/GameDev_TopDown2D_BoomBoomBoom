@@ -6,6 +6,10 @@ using UnityEngine;
 public class Item : MonoBehaviour
 {
     [SerializeField] private ItemEffectSO _itemEffect;
+    [SerializeField] private AudioGroupSO _collectSfx;
+
+    [Header("Broadcast on channel:")]
+    [SerializeField] private AudioEventChannelSO _sfxChannel;
 
     private void OnEnable()
     {
@@ -22,6 +26,7 @@ public class Item : MonoBehaviour
     {
         if (other.CompareTag(Constant.PlayerTag))
         {
+            _sfxChannel.RaiseEvent(_collectSfx);
             _itemEffect.ApllyEffect();
             Destroy(gameObject);
         }

@@ -8,6 +8,10 @@ public class BombBag : MonoBehaviour
     private Queue<GameObject> _pool;
     private int usedAmount = 0;
 
+    [SerializeField] private AudioGroupSO _bombInstallSfx;
+    [Header("Broadcast on channel:")]
+    [SerializeField] private AudioEventChannelSO _sfxChannel;
+
     [Header("Listen on channel:")]
     [SerializeField] private GameObjectEventChannelSO _returnBombToPoolChannel;
 
@@ -31,6 +35,7 @@ public class BombBag : MonoBehaviour
     {
         if (usedAmount < _playerAttribute.BombAmount)
         {
+            _sfxChannel.RaiseEvent(_bombInstallSfx);
             usedAmount++;
             GameObject bomb;
             if (_pool.Count == 0)
