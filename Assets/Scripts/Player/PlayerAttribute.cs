@@ -5,8 +5,8 @@ public class PlayerAttributeSO : ScriptableObject
 {
     [SerializeField] private float _initSpeed;
     [SerializeField] private int _initBombAmount;
-    [HideInInspector] public float Speed;
-    [HideInInspector] public int BombAmount;
+    public float Speed { get; private set; }
+    public int BombAmount { get; private set; }
     public GameObject BombPrefab;
 
     [Header("Listen on channel:")]

@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1480e073ff9bc354eb1a08b4b9e434dd, type: 3}
   m_Name: ReturnBombToPoolChannel
   m_EditorClassIdentifier: 
-  description: 
+  description: when a bomb goes off, the event is raised, then the bomb returns to
+    player's bomb bag

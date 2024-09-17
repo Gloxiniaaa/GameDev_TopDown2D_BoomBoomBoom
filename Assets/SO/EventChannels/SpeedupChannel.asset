@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79ad3a56633b19e4a8dafc022bf939a4, type: 3}
   m_Name: SpeedupChannel
   m_EditorClassIdentifier: 
-  description: increase player speed when eat the speedup item
+  description: increase player speed when player eats the speedup item

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33817d31493114045ab25f06eea3f642, type: 3}
   m_Name: BombRangeUpChannel
   m_EditorClassIdentifier: 
-  description: raised whenever player collect a item, to notify bombAttribute to
+  description: raised whenever player collects a item, to notify bombAttribute to
     inrease bomb range, notify UI to update number,...

@@ -5,8 +5,8 @@ public class BombAttributeSO : ScriptableObject
 {
     [SerializeField] private float _initCoutDownTime;
     [SerializeField] private int _initRange;
-    [HideInInspector] public float CountDownTime;
-    [HideInInspector] public int Range;
+    public float CountDownTime { get; private set; }
+    public int Range { get; private set; }
     public GameObject ExplosionPrefab;
 
     [Header("Listen on channel:")]
