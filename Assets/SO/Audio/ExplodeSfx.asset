@@ -13,5 +13,9 @@ MonoBehaviour:
   m_Name: ExplodeSfx
   m_EditorClassIdentifier: 
   _audioClips:
-  - {fileID: 8300000, guid: 253eec28a4d4c984e94fcca4943fc60e, type: 3}
+  - {fileID: 8300000, guid: 4bed46b7e383a2a46aa794aa9063378c, type: 3}
+  - {fileID: 8300000, guid: e5d9d6ea11e7153408eab4527e75d4c3, type: 3}
+  - {fileID: 8300000, guid: 45ab4d9764d66db46a6af4b92202ab94, type: 3}
+  - {fileID: 8300000, guid: b042b5f9ed382fb43aacc3b505f64ba0, type: 3}
+  - {fileID: 8300000, guid: 02dad978532cc9449b739e730d0b6896, type: 3}
   Volume: 1

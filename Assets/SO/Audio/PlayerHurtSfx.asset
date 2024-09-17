@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c34dd041ba10edd47907b6317348829c, type: 3}
-  m_Name: BombInstallSfx
+  m_Name: PlayerHurtSfx
   m_EditorClassIdentifier: 
   _audioClips:
-  - {fileID: 8300000, guid: 644590876ef53874b84ed1bac1050b36, type: 3}
-  Volume: 0.1
+  - {fileID: 8300000, guid: 05f861dc337842d4092429492fe73591, type: 3}
+  Volume: 1

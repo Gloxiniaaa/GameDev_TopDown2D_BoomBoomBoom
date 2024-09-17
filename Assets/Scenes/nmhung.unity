@@ -349,6 +349,8 @@ MonoBehaviour:
   _mapGrid: {fileID: 981004243}
   _cellIndicator: {fileID: 831682891}
   _bombBag: {fileID: 1783352591}
+  _hurtSfx: {fileID: 11400000, guid: 53a7679881af8124480b58c5d1ef8609, type: 2}
+  _sfxChannel: {fileID: 11400000, guid: 147d38e6949e40b448f56a903cde74bf, type: 2}
 --- !u!61 &499023858
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -33,6 +33,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private BombBag _bombBag;
     #endregion
 
+    [SerializeField] private AudioGroupSO _hurtSfx;
+    [Header("Broadcast on channel:")]
+    [SerializeField] private AudioEventChannelSO _sfxChannel;
+
 
     private void Awake()
     {
@@ -114,7 +118,10 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag(Constant.ExplosionTag))
         {
             if (other.transform.position == _cellIndicator.transform.position)
+            {
+                _sfxChannel.RaiseEvent(_hurtSfx);
                 Debug.Log("player is damaged by a bomb");
+            }
         }
     }
     private void OnDisable()
