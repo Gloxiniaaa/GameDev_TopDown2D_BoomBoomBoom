@@ -15,10 +15,10 @@ public class CharScene : MonoBehaviour
     void Update()
     {
         if(_curCo == null) {
-            _curCo = StartCoroutine(charEffect());
+            _curCo = StartCoroutine(CharEffect());
         }
     }
-    IEnumerator charEffect() {
+    IEnumerator CharEffect() {
         _itself.DOAnchorPosY(155f, 1f);
         yield return new WaitForSeconds(1f);
         _itself.DOAnchorPosY(140f, 1f);

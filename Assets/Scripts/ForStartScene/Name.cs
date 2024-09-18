@@ -8,10 +8,10 @@ public class Name : MonoBehaviour
     private Coroutine _curCo;
     private void Update() {
         if (_curCo == null) {
-            _curCo = StartCoroutine(letterEffect());
+            _curCo = StartCoroutine(LetterEffect());
         }
     }
-    IEnumerator letterEffect() {
+    IEnumerator LetterEffect() {
         for(int i = 0; i < _letters.Length; i++){
             
             _letters[i].DOAnchorPosY(-30, 1f);
