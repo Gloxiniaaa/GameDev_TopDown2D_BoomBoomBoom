@@ -14,7 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _initCoutDownTime: 3
   _initRange: 1
-  CountDownTime: 3
-  Range: 3
-  ExplosionPrefab: {fileID: 7816949675227772750, guid: f28ba1a2217a3e64a9d2641db80c6c86, type: 3}
+  ExplosionPrefab: {fileID: 3690576868184667698, guid: f894d7abb8f6ad64c88b49c460633205, type: 3}
   _bombRangeUpEvent: {fileID: 11400000, guid: 6cffc8533026eb744b4144602b44606f, type: 2}

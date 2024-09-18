@@ -14,8 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _initSpeed: 3
   _initBombAmount: 3
-  Speed: 3
-  BombAmount: 3
-  BombPrefab: {fileID: 6377980875007430283, guid: d323983949e055340b53f1034a543e5a, type: 3}
+  BombPrefab: {fileID: 3464010157363128502, guid: 1c8946f2c20de7d4c98633a16202e652, type: 3}
   _speedupEvent: {fileID: 11400000, guid: b5ae461c9ca6dca4f902e34ebc329368, type: 2}
   _bombAmountUpEvent: {fileID: 11400000, guid: d88473aeb93409842b0443b656e734da, type: 2}
