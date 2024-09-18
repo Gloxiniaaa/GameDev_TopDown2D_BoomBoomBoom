@@ -88,7 +88,7 @@ public class FireBall : MonoBehaviour
             RaycastHit2D obstacleDetector = Physics2D.Raycast(transform.position + direction * (i + 1), direction, 0.1f, 1 << Constant.SolidLayer);
             if (obstacleDetector.collider)
             {
-                if (obstacleDetector.collider.CompareTag(Constant.DestroyableTag) || obstacleDetector.collider.CompareTag(Constant.FireBallTag))
+                if (obstacleDetector.collider.CompareTag(Constant.DestroyableTag) || obstacleDetector.collider.CompareTag(Constant.BombTag))
                 {
                     _explosions[_explosionIndex].SetActive(true);
                     _explosions[_explosionIndex++].transform.position = transform.position + direction * (i + 1);

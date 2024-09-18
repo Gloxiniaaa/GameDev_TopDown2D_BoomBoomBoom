@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 3440872102922486607}
   m_Layer: 3
   m_Name: WaterBall
-  m_TagString: Fireball
+  m_TagString: Bomb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

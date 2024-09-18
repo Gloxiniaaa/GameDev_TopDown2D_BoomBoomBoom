@@ -4,10 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Fireball
   - Explosion
   - Item
   - Destroyable
+  - Bomb
   layers:
   - Default
   - TransparentFX

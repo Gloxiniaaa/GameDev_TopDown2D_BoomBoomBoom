@@ -59,7 +59,8 @@ public class PlayerController : MonoBehaviour
 
     private void OnFire()
     {
-        if (_obstacleDetector.collider && _obstacleDetector.collider.CompareTag("Fireball"))
+        RaycastHit2D currentCell = Physics2D.Raycast(_cellIndicator.transform.position, _direction, 0.1f, 1<< Constant.SolidLayer);
+        if (currentCell.collider && currentCell.collider.CompareTag(Constant.BombTag))
         {
             Debug.Log("this cell is already installed a boom");
             return;

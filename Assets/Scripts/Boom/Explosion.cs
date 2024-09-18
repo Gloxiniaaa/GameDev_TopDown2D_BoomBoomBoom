@@ -11,7 +11,7 @@ public class Explosion : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag(Constant.FireBallTag))
+        if (other.CompareTag(Constant.BombTag))
         {
             // for chain explosion
             FireBall otherBomb = other.GetComponent<FireBall>();
