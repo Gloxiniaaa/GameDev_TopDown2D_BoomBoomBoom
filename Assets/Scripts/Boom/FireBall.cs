@@ -50,6 +50,7 @@ public class FireBall : MonoBehaviour
     private IEnumerator StartCountDown()
     {
         yield return new WaitForSeconds(_bombAttribute.CountDownTime);
+        _sfxChannel.RaiseEvent(_explodeSfx);
         Explode();
     }
 
@@ -59,7 +60,6 @@ public class FireBall : MonoBehaviour
             return;
 
         _isExploded = true;
-        _sfxChannel.RaiseEvent(_explodeSfx);
 
         // center
         _explosions[_explosionIndex].SetActive(true);
