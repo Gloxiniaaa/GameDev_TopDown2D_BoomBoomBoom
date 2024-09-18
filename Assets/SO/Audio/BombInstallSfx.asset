@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: BombInstallSfx
   m_EditorClassIdentifier: 
   _audioClips:
-  - {fileID: 8300000, guid: 644590876ef53874b84ed1bac1050b36, type: 3}
+  - {fileID: 8300000, guid: 9a12cc091082c944d9aaaceb1dfeb8b5, type: 3}
+  - {fileID: 8300000, guid: 69e87119fb9f25b4995db23e66177299, type: 3}
   Volume: 0.1
