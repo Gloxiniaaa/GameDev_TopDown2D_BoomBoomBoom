@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4050015762531078720}
   - component: {fileID: 7255353290443537787}
   - component: {fileID: 1202123049851943692}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: BombAmountUpItem
   m_TagString: Item
   m_Icon: {fileID: 0}
@@ -75,8 +75,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 474016618, guid: aa8b3c46da8239a4c8f5ca39ebb67d1a, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 1719664298, guid: aa8b3c46da8239a4c8f5ca39ebb67d1a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -123,7 +123,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.2}
-    oldSize: {x: 0.4375, y: 0.59375}
+    oldSize: {x: 0.375, y: 0.59375}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
