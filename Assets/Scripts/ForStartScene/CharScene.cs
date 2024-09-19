@@ -1,28 +1,27 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using DG.Tweening;
 public class CharScene : MonoBehaviour
 {
-     [SerializeField] private RectTransform _itself;
-    private Coroutine _curCo = null;
-    void Start()
+    [SerializeField] private RectTransform _itself;
+
+    private void OnEnable()
     {
-        
+        CharEffect();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void CharEffect()
     {
-        if(_curCo == null) {
-            _curCo = StartCoroutine(CharEffect());
-        }
+        Sequence sequence = DOTween.Sequence();
+        sequence.Append(_itself.DOAnchorPosY(155f, 1f));
+        sequence.Append(_itself.DOAnchorPosY(140f, 1f));
+        sequence.SetLoops(-1, LoopType.Yoyo);
+
+        _itself.DOAnchorPosY(155f, 1f).OnComplete(() => _itself.DOAnchorPosY(140f, 1f));
     }
-    IEnumerator CharEffect() {
-        _itself.DOAnchorPosY(155f, 1f);
-        yield return new WaitForSeconds(1f);
-        _itself.DOAnchorPosY(140f, 1f);
-        yield return new WaitForSeconds(1f);
-        _curCo = null;
+
+    private void OnDisable()
+    {
+        _itself.DOKill();
     }
 }

@@ -18,6 +18,7 @@ public class EnemyScene : MonoBehaviour
             _curCo = StartCoroutine(EnemyEffect());
         }
     }
+    
     IEnumerator EnemyEffect() {
         _itself.DOScaleY(3.8f, 1f);
         yield return new WaitForSeconds(0.2f);
