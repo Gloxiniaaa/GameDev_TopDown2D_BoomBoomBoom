@@ -5647,6 +5647,7 @@ MonoBehaviour:
   _playerAttribute: {fileID: 11400000, guid: 6310e2075731f3941856f35dfdbf556b, type: 2}
   _bombInstallSfx: {fileID: 11400000, guid: cf3f61acdf4268545bcc6fd490f819a3, type: 2}
   _sfxChannel: {fileID: 11400000, guid: 147d38e6949e40b448f56a903cde74bf, type: 2}
+  _currentBombLeftUIChannel: {fileID: 11400000, guid: 2a3fc8a2e863ccf4dbf61c49773899e8, type: 2}
   _returnBombToPoolChannel: {fileID: 11400000, guid: c8c1e5a801ed8e445be3cf63b2516be4, type: 2}
 --- !u!1 &1816934687
 GameObject:

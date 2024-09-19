@@ -6,11 +6,13 @@ public class BombBag : MonoBehaviour
 {
     [SerializeField] private PlayerAttributeSO _playerAttribute;
     private Queue<GameObject> _pool;
-    private int usedAmount = 0;
+    private int _usedAmount = 0;
 
     [SerializeField] private AudioGroupSO _bombInstallSfx;
     [Header("Broadcast on channel:")]
     [SerializeField] private AudioEventChannelSO _sfxChannel;
+    [SerializeField] private IntEventChannelSO _currentBombLeftUIChannel;
+
 
     [Header("Listen on channel:")]
     [SerializeField] private GameObjectEventChannelSO _returnBombToPoolChannel;
@@ -33,10 +35,10 @@ public class BombBag : MonoBehaviour
 
     public void InstallBomb(Vector3 position)
     {
-        if (usedAmount < _playerAttribute.BombAmount)
+        if (_usedAmount < _playerAttribute.BombAmount)
         {
             _sfxChannel.RaiseEvent(_bombInstallSfx);
-            usedAmount++;
+            _usedAmount++;
             GameObject bomb;
             if (_pool.Count == 0)
             {
@@ -48,14 +50,17 @@ public class BombBag : MonoBehaviour
             }
             bomb.transform.position = position;
             bomb.SetActive(true);
+
+            _currentBombLeftUIChannel.RaiseEvent(_usedAmount);
         }
     }
 
     private void ReturnToPool(GameObject bomb)
     {
-        usedAmount--;
+        _usedAmount--;
         bomb.SetActive(false);
         _pool.Enqueue(bomb);
+        _currentBombLeftUIChannel.RaiseEvent(_usedAmount);
     }
 
     private void OnDisable()
