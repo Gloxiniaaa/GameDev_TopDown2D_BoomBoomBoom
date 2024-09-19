@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: PlayerHurtSfx
   m_EditorClassIdentifier: 
   _audioClips:
-  - {fileID: 8300000, guid: 05f861dc337842d4092429492fe73591, type: 3}
+  - {fileID: 8300000, guid: 4bcf213123645cf4bb6194ef5456cba6, type: 3}
   Volume: 0.2
