@@ -9,6 +9,11 @@ public class PlayerAttributeSO : ScriptableObject
     public int BombAmount { get; private set; }
     public GameObject BombPrefab;
 
+    [Header("Broadcast on channel:")]
+    [SerializeField] private IntEventChannelSO _updateSpeedUIChannel;
+    [SerializeField] private IntEventChannelSO _updateBombAmountUIChannel;
+
+
     [Header("Listen on channel:")]
     [SerializeField] private FloatEventChannelSO _speedupEvent;
     [SerializeField] private IntEventChannelSO _bombAmountUpEvent;
@@ -24,11 +29,14 @@ public class PlayerAttributeSO : ScriptableObject
     private void IncreaseSpeed(float amount)
     {
         Speed += amount;
+        int scaleSpeed = (int)((Speed - _initSpeed) / amount);
+        _updateSpeedUIChannel.RaiseEvent(scaleSpeed);
     }
 
     private void IncreaseBombAmount(int amount)
     {
         BombAmount += amount;
+        _updateBombAmountUIChannel.RaiseEvent(BombAmount);
     }
 
     private void OnDisable()

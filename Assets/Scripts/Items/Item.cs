@@ -28,6 +28,7 @@ public class Item : MonoBehaviour
         {
             _sfxChannel.RaiseEvent(_collectSfx);
             _itemEffect.ApllyEffect();
+            transform.DOKill();
             Destroy(gameObject);
         }
     }

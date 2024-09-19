@@ -9,6 +9,9 @@ public class BombAttributeSO : ScriptableObject
     public int Range { get; private set; }
     public GameObject ExplosionPrefab;
 
+    [Header("Broadcast on channel:")]
+    [SerializeField] private IntEventChannelSO _updateBombRangeUIChannel;
+
     [Header("Listen on channel:")]
     [SerializeField] private IntEventChannelSO _bombRangeUpEvent;
 
@@ -22,6 +25,7 @@ public class BombAttributeSO : ScriptableObject
     private void IncreaseBombRange(int amount)
     {
         Range += amount;
+        _updateBombRangeUIChannel.RaiseEvent(Range);
     }
 
     private void OnDisable()
