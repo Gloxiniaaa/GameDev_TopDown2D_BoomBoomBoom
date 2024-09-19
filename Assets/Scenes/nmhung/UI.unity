@@ -196,7 +196,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 181003451435110450, guid: 7af1512af6da3ad489077e6992691a1e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -120
+      value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 181003451435110450, guid: 7af1512af6da3ad489077e6992691a1e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -213,10 +213,18 @@ PrefabInstance:
     - target: {fileID: 2786907068477674814, guid: 7af1512af6da3ad489077e6992691a1e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: a86a5575aec806744a8edd816159b325, type: 3}
+      objectReference: {fileID: 21300000, guid: 6f8e300eb14b175428688fb7a08678c8, type: 3}
     - target: {fileID: 4036999296780439262, guid: 7af1512af6da3ad489077e6992691a1e, type: 3}
       propertyPath: m_Name
       value: BombAmount
+      objectReference: {fileID: 0}
+    - target: {fileID: 8569152085623146948, guid: 7af1512af6da3ad489077e6992691a1e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 8569152085623146948, guid: 7af1512af6da3ad489077e6992691a1e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 8830256411512661025, guid: 7af1512af6da3ad489077e6992691a1e, type: 3}
       propertyPath: m_text
@@ -685,10 +693,26 @@ PrefabInstance:
     - target: {fileID: 2786907068477674814, guid: 7af1512af6da3ad489077e6992691a1e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: fbb44ef4aeaa37848b79892e088ca5aa, type: 3}
+      objectReference: {fileID: 21300000, guid: 66583bf5be336ac44a3fd327fb2380c1, type: 3}
     - target: {fileID: 4036999296780439262, guid: 7af1512af6da3ad489077e6992691a1e, type: 3}
       propertyPath: m_Name
       value: BombRange
+      objectReference: {fileID: 0}
+    - target: {fileID: 8127013022489467519, guid: 7af1512af6da3ad489077e6992691a1e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8127013022489467519, guid: 7af1512af6da3ad489077e6992691a1e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8569152085623146948, guid: 7af1512af6da3ad489077e6992691a1e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 8569152085623146948, guid: 7af1512af6da3ad489077e6992691a1e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 8830256411512661025, guid: 7af1512af6da3ad489077e6992691a1e, type: 3}
       propertyPath: m_text
@@ -789,7 +813,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 181003451435110450, guid: 7af1512af6da3ad489077e6992691a1e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 120
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 181003451435110450, guid: 7af1512af6da3ad489077e6992691a1e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -806,26 +830,6 @@ PrefabInstance:
     - target: {fileID: 4036999296780439262, guid: 7af1512af6da3ad489077e6992691a1e, type: 3}
       propertyPath: m_Name
       value: Speed
-      objectReference: {fileID: 0}
-    - target: {fileID: 8830256411512661025, guid: 7af1512af6da3ad489077e6992691a1e, type: 3}
-      propertyPath: m_text
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8830256411512661025, guid: 7af1512af6da3ad489077e6992691a1e, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-    - target: {fileID: 8830256411512661025, guid: 7af1512af6da3ad489077e6992691a1e, type: 3}
-      propertyPath: m_fontStyle
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8830256411512661025, guid: 7af1512af6da3ad489077e6992691a1e, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-    - target: {fileID: 8830256411512661025, guid: 7af1512af6da3ad489077e6992691a1e, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
