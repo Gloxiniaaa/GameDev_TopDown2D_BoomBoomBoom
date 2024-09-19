@@ -1,4 +1,5 @@
 
+using System.Collections;
 using UnityEngine;
 
 public class RandomMoveEnemy : Enemy
@@ -8,10 +9,13 @@ public class RandomMoveEnemy : Enemy
     [SerializeField] private Grid _grid;
     [SerializeField] private float _speed;
     [SerializeField] private LayerMask _layer;
+    [SerializeField] private float _timeToChangeDir = 3f;
     private Vector3 _dir;
     private Vector3 _nextPos;
     private int _dirXHash = Animator.StringToHash("MoveHori");
     private int _dirYHash = Animator.StringToHash("MoveVerti");
+    private bool _changeDir = false;
+    private Coroutine _curCo = null;
 
     private void Start()
     {
@@ -30,7 +34,11 @@ public class RandomMoveEnemy : Enemy
     {
         MoveAnim();
         Move(_nextPos);
-
+        if(!_changeDir && _curCo == null) {
+            Debug.Log("start");
+            _curCo = StartCoroutine(TimeCounter(_timeToChangeDir));
+        }
+        Debug.Log(_nextPos);
     }
 
     private void MoveAnim()
@@ -38,7 +46,13 @@ public class RandomMoveEnemy : Enemy
         _anim.SetFloat(_dirXHash, _rb.velocity.x);
         _anim.SetFloat(_dirYHash, _rb.velocity.y);
     }
+    
+    private IEnumerator TimeCounter(float time) {
 
+        yield return new WaitForSeconds(time);
+        _curCo = null;
+        _changeDir = true;
+    }
     private void DetectNextStep()
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, _dir, 0.5f, _layer);
@@ -50,14 +64,21 @@ public class RandomMoveEnemy : Enemy
 
             }
         }
-
+        else {
+            float dis = Vector2.Distance(transform.position, _nextPos);
+            if(_changeDir && (dis <= 1.1f && dis >=0.9f)) {
+                Debug.Log("change");
+                _dir = GetRandomDir(_dir);
+                _changeDir = false;
+            }
+        }
         Vector3Int nextCell = _grid.WorldToCell(transform.position + _dir);
         _nextPos = _grid.GetCellCenterWorld(nextCell);
     }
 
     private void Move(Vector3 newPos)
     {
-        _rb.velocity = (newPos - transform.position).normalized * _speed * Time.deltaTime;
+        _rb.velocity = (newPos - transform.position).normalized * _speed ;
         DetectNextStep();
 
     }
