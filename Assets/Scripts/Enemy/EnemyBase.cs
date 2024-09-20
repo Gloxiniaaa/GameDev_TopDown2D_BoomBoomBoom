@@ -1,10 +1,10 @@
-
 using System.Collections;
+using DG.Tweening;
 using UnityEngine;
 
-public class RandomMoveEnemy : MonoBehaviour
+public class EnemyBase : MonoBehaviour
 {
-    [SerializeField] private Rigidbody2D _rb;
+     [SerializeField] private Rigidbody2D _rb;
     [SerializeField] private Animator _anim;
     [SerializeField] private Grid _grid;
     [SerializeField] private float _speed;
@@ -14,7 +14,10 @@ public class RandomMoveEnemy : MonoBehaviour
     private Vector3 _nextPos;
     private int _dirXHash = Animator.StringToHash("MoveHori");
     private int _dirYHash = Animator.StringToHash("MoveVerti");
+    private int _dieForAnim = Animator.StringToHash("DieAnim");
+    private int _getDie = Animator.StringToHash("GetDie");
     private bool _changeDir = false;
+    private bool _checkDie = false;
     private Coroutine _curCo = null;
 
     private void Start()
@@ -32,13 +35,13 @@ public class RandomMoveEnemy : MonoBehaviour
 
     private void Update()
     {
-        MoveAnim();
-        Move(_nextPos);
-        if(!_changeDir && _curCo == null) {
-            Debug.Log("start");
-            _curCo = StartCoroutine(TimeCounter(_timeToChangeDir));
+        if(!_checkDie) {
+            MoveAnim();
+            Move(_nextPos);
+            if(!_changeDir && _curCo == null) {
+                _curCo = StartCoroutine(TimeCounter(_timeToChangeDir));
+            }
         }
-        Debug.Log(_nextPos);
     }
 
     private void MoveAnim()
@@ -67,7 +70,7 @@ public class RandomMoveEnemy : MonoBehaviour
         else {
             float dis = Vector2.Distance(transform.position, _nextPos);
             if(_changeDir && (dis <= 1.1f && dis >=0.9f)) {
-                Debug.Log("change");
+                
                 _dir = GetRandomDir(_dir);
                 _changeDir = false;
             }
@@ -111,5 +114,25 @@ public class RandomMoveEnemy : MonoBehaviour
             else direct = Vector3.right;
         }
         return direct;
+    }
+    private void OnTriggerEnter2D(Collider2D other) {
+        if(other.gameObject.CompareTag(Constant.ExplosionTag)){
+            _checkDie = true;
+            _rb.velocity = Vector3.zero;
+            DieEffect(other.transform.position);
+        }
+    }
+    private void DieEffect(Vector3 explodePos){
+        Vector3 disDirection = (transform.position - explodePos).normalized;
+        Vector3Int _diePos = _grid.WorldToCell(disDirection );
+        Vector3Int getIntCurPos = Vector3Int.RoundToInt(transform.position);
+        transform.DOMove(getIntCurPos - _grid.GetCellCenterWorld(_diePos), 1f);
+        GetComponent<SpriteRenderer>().DOFade(0, 1f).SetDelay(3f);
+        int idx = (disDirection.x > 0) ? 1 : 0;
+        _anim.SetTrigger(_getDie);
+        _anim.SetFloat(_dieForAnim, idx);
+    }
+    private void InactiveAfterDie() {
+        gameObject.SetActive(false);
     }
 }
