@@ -125,9 +125,10 @@ public class EnemyBase : MonoBehaviour
     private void DieEffect(Vector3 explodePos){
         Vector3 disDirection = (transform.position - explodePos).normalized;
         Vector3Int _diePos = _grid.WorldToCell(disDirection );
-        Vector3Int getIntCurPos = Vector3Int.RoundToInt(transform.position);
-        transform.DOMove(getIntCurPos - _grid.GetCellCenterWorld(_diePos), 1f);
+        
+        transform.DOMove(Vector3Int.RoundToInt(transform.position) - _grid.GetCellCenterWorld(_diePos), 1f);
         GetComponent<SpriteRenderer>().DOFade(0, 1f).SetDelay(3f);
+
         int idx = (disDirection.x > 0) ? 1 : 0;
         _anim.SetTrigger(_getDie);
         _anim.SetFloat(_dieForAnim, idx);
