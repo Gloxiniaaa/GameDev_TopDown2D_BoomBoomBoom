@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6459772412791162999}
   - component: {fileID: 6062313622438251893}
   - component: {fileID: 5360974103893156352}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -198,8 +198,7 @@ MonoBehaviour:
   _sfxChannel: {fileID: 11400000, guid: 147d38e6949e40b448f56a903cde74bf, type: 2}
   _rb: {fileID: 6459772412791162999}
   _anim: {fileID: 4565009083727693800}
-  _grid: {fileID: 0}
-  _speed: 0.5
+  _speed: 2
   _layer:
     serializedVersion: 2
     m_Bits: 8

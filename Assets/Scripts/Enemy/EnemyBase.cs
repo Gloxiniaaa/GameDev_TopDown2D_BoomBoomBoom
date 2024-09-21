@@ -10,10 +10,10 @@ public class EnemyBase : MonoBehaviour
 
     [SerializeField] private Rigidbody2D _rb;
     [SerializeField] private Animator _anim;
-    [SerializeField] private Grid _grid;
     [SerializeField] private float _speed;
     [SerializeField] private LayerMask _layer;
     [SerializeField] private float _timeToChangeDir = 3f;
+    private Grid _grid;
     private Vector3 _dir;
     private Vector3 _nextPos;
     private int _dirXHash = Animator.StringToHash("MoveHori");
@@ -22,6 +22,7 @@ public class EnemyBase : MonoBehaviour
     private int _getDie = Animator.StringToHash("GetDie");
     private bool _changeDir = false;
     private bool _checkDie = false;
+    private bool _meetBoom = false;
     private Coroutine _curCo = null;
 
 
@@ -71,20 +72,23 @@ public class EnemyBase : MonoBehaviour
 
     private IEnumerator TimeCounter(float time)
     {
-
         yield return new WaitForSeconds(time);
         _curCo = null;
+        _meetBoom = false;
         _changeDir = true;
     }
     private void DetectNextStep()
     {
-        RaycastHit2D hit = Physics2D.Raycast(_nextPos, _dir, 0.5f, _layer);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, _dir, 0.5f, _layer);
         if (hit.collider != null)
         {
-            if (hit.collider.CompareTag(Constant.UntaggedTag) || hit.collider.CompareTag(Constant.DestroyableTag))
+            if (hit.collider.CompareTag(Constant.UntaggedTag) || hit.collider.CompareTag(Constant.DestroyableTag))    
             {
                 _dir = GetRandomDir(_dir);
-
+            }
+            if (!_meetBoom && hit.collider.CompareTag(Constant.BombTag)){
+                _dir = GetRandomDir(_dir);
+                _meetBoom = true;
             }
         }
         else
@@ -92,7 +96,6 @@ public class EnemyBase : MonoBehaviour
             float dis = Vector2.Distance(transform.position, _nextPos);
             if (_changeDir && (dis <= 1.1f && dis >= 0.9f))
             {
-
                 _dir = GetRandomDir(_dir);
                 _changeDir = false;
             }
