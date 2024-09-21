@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class EnemyBase : MonoBehaviour
 {
-     [SerializeField] private Rigidbody2D _rb;
+    [SerializeField] private AudioGroupSO _enemyDieSfx;
+    [Header("Broadcast on channel:")]
+    [SerializeField] private AudioEventChannelSO _sfxChannel;
+
+    [SerializeField] private Rigidbody2D _rb;
     [SerializeField] private Animator _anim;
     [SerializeField] private Grid _grid;
     [SerializeField] private float _speed;
@@ -35,10 +39,12 @@ public class EnemyBase : MonoBehaviour
 
     private void Update()
     {
-        if(!_checkDie) {
+        if (!_checkDie)
+        {
             MoveAnim();
             Move(_nextPos);
-            if(!_changeDir && _curCo == null) {
+            if (!_changeDir && _curCo == null)
+            {
                 _curCo = StartCoroutine(TimeCounter(_timeToChangeDir));
             }
         }
@@ -49,8 +55,9 @@ public class EnemyBase : MonoBehaviour
         _anim.SetFloat(_dirXHash, _rb.velocity.x);
         _anim.SetFloat(_dirYHash, _rb.velocity.y);
     }
-    
-    private IEnumerator TimeCounter(float time) {
+
+    private IEnumerator TimeCounter(float time)
+    {
 
         yield return new WaitForSeconds(time);
         _curCo = null;
@@ -67,10 +74,12 @@ public class EnemyBase : MonoBehaviour
 
             }
         }
-        else {
+        else
+        {
             float dis = Vector2.Distance(transform.position, _nextPos);
-            if(_changeDir && (dis <= 1.1f && dis >=0.9f)) {
-                
+            if (_changeDir && (dis <= 1.1f && dis >= 0.9f))
+            {
+
                 _dir = GetRandomDir(_dir);
                 _changeDir = false;
             }
@@ -81,7 +90,7 @@ public class EnemyBase : MonoBehaviour
 
     private void Move(Vector3 newPos)
     {
-        _rb.velocity = (newPos - transform.position).normalized * _speed ;
+        _rb.velocity = (newPos - transform.position).normalized * _speed;
         DetectNextStep();
 
     }
@@ -115,25 +124,30 @@ public class EnemyBase : MonoBehaviour
         }
         return direct;
     }
-    private void OnTriggerEnter2D(Collider2D other) {
-        if(other.gameObject.CompareTag(Constant.ExplosionTag)){
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag(Constant.ExplosionTag) && !_checkDie)
+        {
             _checkDie = true;
             _rb.velocity = Vector3.zero;
             DieEffect(other.transform.position);
         }
     }
-    private void DieEffect(Vector3 explodePos){
+    private void DieEffect(Vector3 explodePos)
+    {
+        _sfxChannel.RaiseEvent(_enemyDieSfx);
         Vector3 disDirection = (transform.position - explodePos).normalized;
-        Vector3Int _diePos = _grid.WorldToCell(disDirection );
-        
+        Vector3Int _diePos = _grid.WorldToCell(disDirection);
+
         transform.DOMove(Vector3Int.RoundToInt(transform.position) - _grid.GetCellCenterWorld(_diePos), 1f);
-        GetComponent<SpriteRenderer>().DOFade(0, 1f).SetDelay(3f);
+        GetComponent<SpriteRenderer>().DOFade(0, 1f).SetDelay(1f);
 
         int idx = (disDirection.x > 0) ? 1 : 0;
         _anim.SetTrigger(_getDie);
         _anim.SetFloat(_dieForAnim, idx);
     }
-    private void InactiveAfterDie() {
+    private void InactiveAfterDie()
+    {
         gameObject.SetActive(false);
     }
 }

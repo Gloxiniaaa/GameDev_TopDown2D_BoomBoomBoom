@@ -645,10 +645,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4762a7ff2275e264889fcd6188842798, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _enemyDieSfx: {fileID: 11400000, guid: 0abc63a59f0c9bf48b489d4a45cf5bfd, type: 2}
+  _sfxChannel: {fileID: 11400000, guid: 147d38e6949e40b448f56a903cde74bf, type: 2}
   _rb: {fileID: 79933569}
   _anim: {fileID: 79933566}
   _grid: {fileID: 438668136}
-  _speed: 2
+  _speed: 0.5
   _layer:
     serializedVersion: 2
     m_Bits: 8
