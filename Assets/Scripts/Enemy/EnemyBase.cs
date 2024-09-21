@@ -24,6 +24,19 @@ public class EnemyBase : MonoBehaviour
     private bool _checkDie = false;
     private Coroutine _curCo = null;
 
+
+    private void Awake()
+    {
+        _grid = GameObject.Find("Grid").GetComponent<Grid>();
+        StartCoroutine(Init());
+    }
+    IEnumerator Init()
+    {
+        _rb.velocity = Vector3.zero;
+        _checkDie = true;
+        yield return new WaitForSeconds(1.6f);
+        _checkDie = false;
+    }
     private void Start()
     {
         Vector3Int curPos = _grid.WorldToCell(transform.position);
@@ -65,7 +78,7 @@ public class EnemyBase : MonoBehaviour
     }
     private void DetectNextStep()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, _dir, 0.5f, _layer);
+        RaycastHit2D hit = Physics2D.Raycast(_nextPos, _dir, 0.5f, _layer);
         if (hit.collider != null)
         {
             if (hit.collider.CompareTag(Constant.UntaggedTag) || hit.collider.CompareTag(Constant.DestroyableTag))
