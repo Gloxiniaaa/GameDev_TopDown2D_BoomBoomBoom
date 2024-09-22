@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6062313622438251893}
   - component: {fileID: 5360974103893156352}
   m_Layer: 8
-  m_Name: Chomp
+  m_Name: Vomfy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
