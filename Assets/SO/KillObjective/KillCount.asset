@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1702a70fedb590444bcc52dc7371b6ad, type: 3}
+  m_Name: KillCount
+  m_EditorClassIdentifier: 
+  description: 'Store the value of how many enemies player has killed.
+
+    Raise
+    the event "OnValueChaned" everytime the value is chaned. Mostly used to update
+    UI value'
+  _initialValue: 0
+  _resetOnEnable: 1
+  OnValueChanged: {fileID: 11400000, guid: cdbf3113266cd7943b1045a92a5977f8, type: 2}
