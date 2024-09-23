@@ -7,38 +7,38 @@ public class EnemyBase : MonoBehaviour
     [SerializeField] private AudioGroupSO _enemyDieSfx;
     [Header("Broadcast on channel:")]
     [SerializeField] private AudioEventChannelSO _sfxChannel;
-
-    [SerializeField] private Rigidbody2D _rb;
-    [SerializeField] private Animator _anim;
+    [SerializeField] private VoidEventChannelSO _enemyDeathChannel;
+    [SerializeField] protected Rigidbody2D _rb;
+    [SerializeField] protected Animator _anim;
     [SerializeField] private float _speed;
     [SerializeField] private LayerMask _layer;
     [SerializeField] private float _timeToChangeDir = 3f;
     private Grid _grid;
     private Vector3 _dir;
-    private Vector3 _nextPos;
+    protected Vector3 _nextPos;
     private int _dirXHash = Animator.StringToHash("MoveHori");
     private int _dirYHash = Animator.StringToHash("MoveVerti");
     private int _dieForAnim = Animator.StringToHash("DieAnim");
     private int _getDie = Animator.StringToHash("GetDie");
     private bool _changeDir = false;
-    private bool _checkDie = false;
+    protected bool _checkDie = false;
     private bool _meetBoom = false;
     private Coroutine _curCo = null;
-
+    
 
     private void Awake()
     {
         _grid = GameObject.Find("Grid").GetComponent<Grid>();
         StartCoroutine(Init());
     }
-    IEnumerator Init()
+    private IEnumerator Init()
     {
         _rb.velocity = Vector3.zero;
         _checkDie = true;
         yield return new WaitForSeconds(1.6f);
         _checkDie = false;
     }
-    private void Start()
+    protected void Start()
     {
         Vector3Int curPos = _grid.WorldToCell(transform.position);
 
@@ -51,7 +51,7 @@ public class EnemyBase : MonoBehaviour
         _nextPos = _grid.CellToWorld(curPos) + _dir;
     }
 
-    private void Update()
+    protected virtual void Update()
     {
         if (!_checkDie)
         {
@@ -64,7 +64,7 @@ public class EnemyBase : MonoBehaviour
         }
     }
 
-    private void MoveAnim()
+    protected virtual void MoveAnim()
     {
         _anim.SetFloat(_dirXHash, _rb.velocity.x);
         _anim.SetFloat(_dirYHash, _rb.velocity.y);
@@ -77,7 +77,7 @@ public class EnemyBase : MonoBehaviour
         _meetBoom = false;
         _changeDir = true;
     }
-    private void DetectNextStep()
+    protected void DetectNextStep()
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, _dir, 0.5f, _layer);
         if (hit.collider != null)
@@ -104,7 +104,7 @@ public class EnemyBase : MonoBehaviour
         _nextPos = _grid.GetCellCenterWorld(nextCell);
     }
 
-    private void Move(Vector3 newPos)
+    protected virtual void Move(Vector3 newPos)
     {
         _rb.velocity = (newPos - transform.position).normalized * _speed;
         DetectNextStep();
@@ -140,7 +140,7 @@ public class EnemyBase : MonoBehaviour
         }
         return direct;
     }
-    private void OnTriggerEnter2D(Collider2D other)
+    protected virtual void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag(Constant.ExplosionTag) && !_checkDie)
         {
@@ -149,7 +149,7 @@ public class EnemyBase : MonoBehaviour
             DieEffect(other.transform.position);
         }
     }
-    private void DieEffect(Vector3 explodePos)
+    protected void DieEffect(Vector3 explodePos)
     {
         _sfxChannel.RaiseEvent(_enemyDieSfx);
         Vector3 disDirection = (transform.position - explodePos).normalized;
@@ -161,6 +161,7 @@ public class EnemyBase : MonoBehaviour
         int idx = (disDirection.x > 0) ? 1 : 0;
         _anim.SetTrigger(_getDie);
         _anim.SetFloat(_dieForAnim, idx);
+        _enemyDeathChannel.RaiseEvent();
     }
     private void InactiveAfterDie()
     {
