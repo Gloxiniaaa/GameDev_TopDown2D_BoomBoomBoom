@@ -14,7 +14,7 @@ public class EnemyBase : MonoBehaviour
     [SerializeField] private LayerMask _layer;
     [SerializeField] private float _timeToChangeDir = 3f;
     private Grid _grid;
-    private Vector3 _dir;
+    protected Vector3 _dir;
     protected Vector3 _nextPos;
     private int _dirXHash = Animator.StringToHash("MoveHori");
     private int _dirYHash = Animator.StringToHash("MoveVerti");
@@ -48,7 +48,7 @@ public class EnemyBase : MonoBehaviour
         else if (initDir == 2) _dir = Vector3.right;
         else _dir = Vector3.up;
 
-        _nextPos = _grid.CellToWorld(curPos) + _dir;
+        _nextPos = _grid.GetCellCenterWorld(curPos) + _dir;
     }
 
     protected virtual void Update()
@@ -79,6 +79,7 @@ public class EnemyBase : MonoBehaviour
     }
     protected void DetectNextStep()
     {
+
         RaycastHit2D hit = Physics2D.Raycast(transform.position, _dir, 0.5f, _layer);
         if (hit.collider != null)
         {
