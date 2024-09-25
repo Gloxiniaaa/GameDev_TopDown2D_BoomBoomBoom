@@ -8355,6 +8355,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6537462743184227314, guid: eb8efda300af4694c87c563aac91cd31, type: 3}
+      propertyPath: _atkRange.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6537462743184227314, guid: eb8efda300af4694c87c563aac91cd31, type: 3}
+      propertyPath: _atkRange.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6537462743184227314, guid: eb8efda300af4694c87c563aac91cd31, type: 3}
+      propertyPath: _atkRange.z
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8109088799430855987, guid: eb8efda300af4694c87c563aac91cd31, type: 3}
       propertyPath: m_Name
       value: JorgetEnemy
