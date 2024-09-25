@@ -8254,6 +8254,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1646635958347730671, guid: 578adef2ab8084043aa8fb76bf3b6cb6, type: 3}
+      propertyPath: _flySfx
+      value: 
+      objectReference: {fileID: 11400000, guid: dac0e192eeddfd447bde2a0216f9373f, type: 2}
     - target: {fileID: 3866701541117221358, guid: 578adef2ab8084043aa8fb76bf3b6cb6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.5
@@ -8297,10 +8301,6 @@ PrefabInstance:
     - target: {fileID: 6050182288098794005, guid: 578adef2ab8084043aa8fb76bf3b6cb6, type: 3}
       propertyPath: m_Name
       value: ChompEnemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 6050182288098794005, guid: 578adef2ab8084043aa8fb76bf3b6cb6, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

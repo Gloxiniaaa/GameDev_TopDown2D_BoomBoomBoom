@@ -13,6 +13,7 @@ public class ChompEnemy : EnemyBase
     private int _atkTrigger = Animator.StringToHash("Attack");
     [SerializeField] private float _timeAttack;
     [SerializeField] private GameObject _smokeEffect;
+    [SerializeField] private AudioGroupSO _flySfx;
     private bool _isAttacking = false;
     private bool _isFlying = false;
 
@@ -79,6 +80,7 @@ public class ChompEnemy : EnemyBase
         _checkDie = false;
         _isAttacking = false;
         _anim.SetTrigger(_fly);
+        _sfxChannel.RaiseEvent(_flySfx);
         _isFlying = true;
     }
     private void ActiveSmokeEffect()

@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c34dd041ba10edd47907b6317348829c, type: 3}
-  m_Name: ThunderSfx
+  m_Name: FlySfx
   m_EditorClassIdentifier: 
   _audioClips:
-  - {fileID: 8300000, guid: 34ae7052caacdaf43987745fe6a0d1ab, type: 3}
-  Volume: 0.02
+  - {fileID: 8300000, guid: f50f333ea507e8047a77dc4122bccd51, type: 3}
+  Volume: 0.3
