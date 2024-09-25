@@ -140,6 +140,8 @@ MonoBehaviour:
   _atkRange: {x: 0, y: 0, z: 0}
   _timeAttack: 10
   _preAtk: {fileID: 7186785511705633303}
+  _preAtkSfx: {fileID: 11400000, guid: 592df4111d95b0840b97a7b43d78ed99, type: 2}
+  _sfxChannel: {fileID: 11400000, guid: 147d38e6949e40b448f56a903cde74bf, type: 2}
 --- !u!50 &1270363061310767949
 Rigidbody2D:
   serializedVersion: 4
@@ -296,6 +298,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5886720923600400103, guid: 569fff58cfc16954cb5d5e035dcb2b21, type: 3}
+      propertyPath: _sfxChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: 147d38e6949e40b448f56a903cde74bf, type: 2}
+    - target: {fileID: 5886720923600400103, guid: 569fff58cfc16954cb5d5e035dcb2b21, type: 3}
+      propertyPath: _thunderSfx
+      value: 
+      objectReference: {fileID: 11400000, guid: dc82d9b9eaf77ad42beeebfaeb26a76a, type: 2}
     - target: {fileID: 7384514412902077819, guid: 569fff58cfc16954cb5d5e035dcb2b21, type: 3}
       propertyPath: m_Name
       value: ThunderStrike (1)
@@ -467,6 +477,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5886720923600400103, guid: 569fff58cfc16954cb5d5e035dcb2b21, type: 3}
+      propertyPath: _sfxChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: 147d38e6949e40b448f56a903cde74bf, type: 2}
+    - target: {fileID: 5886720923600400103, guid: 569fff58cfc16954cb5d5e035dcb2b21, type: 3}
+      propertyPath: _thunderSfx
+      value: 
+      objectReference: {fileID: 11400000, guid: dc82d9b9eaf77ad42beeebfaeb26a76a, type: 2}
     - target: {fileID: 7384514412902077819, guid: 569fff58cfc16954cb5d5e035dcb2b21, type: 3}
       propertyPath: m_Name
       value: ThunderStrike (3)
@@ -538,6 +556,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5886720923600400103, guid: 569fff58cfc16954cb5d5e035dcb2b21, type: 3}
+      propertyPath: _sfxChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: 147d38e6949e40b448f56a903cde74bf, type: 2}
+    - target: {fileID: 5886720923600400103, guid: 569fff58cfc16954cb5d5e035dcb2b21, type: 3}
+      propertyPath: _thunderSfx
+      value: 
+      objectReference: {fileID: 11400000, guid: dc82d9b9eaf77ad42beeebfaeb26a76a, type: 2}
     - target: {fileID: 7384514412902077819, guid: 569fff58cfc16954cb5d5e035dcb2b21, type: 3}
       propertyPath: m_Name
       value: ThunderStrike
@@ -605,6 +631,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5886720923600400103, guid: 569fff58cfc16954cb5d5e035dcb2b21, type: 3}
+      propertyPath: _sfxChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: 147d38e6949e40b448f56a903cde74bf, type: 2}
+    - target: {fileID: 5886720923600400103, guid: 569fff58cfc16954cb5d5e035dcb2b21, type: 3}
+      propertyPath: _thunderSfx
+      value: 
+      objectReference: {fileID: 11400000, guid: dc82d9b9eaf77ad42beeebfaeb26a76a, type: 2}
     - target: {fileID: 7384514412902077819, guid: 569fff58cfc16954cb5d5e035dcb2b21, type: 3}
       propertyPath: m_Name
       value: ThunderStrike (2)
