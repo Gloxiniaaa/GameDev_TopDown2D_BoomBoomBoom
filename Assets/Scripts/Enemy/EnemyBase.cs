@@ -13,7 +13,7 @@ public class EnemyBase : MonoBehaviour
     [SerializeField] private float _speed;
     [SerializeField] private LayerMask _layer;
     [SerializeField] private float _timeToChangeDir = 3f;
-    private Grid _grid;
+    protected Grid _grid;
     protected Vector3 _dir;
     protected Vector3 _nextPos;
     private int _dirXHash = Animator.StringToHash("MoveHori");

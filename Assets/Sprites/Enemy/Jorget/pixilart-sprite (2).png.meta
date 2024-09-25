@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 41442e5a1e907dd4d827a33661931954
+guid: 04e85b39a57e09c4ba75a73db7250805
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,91 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: jorgette-idle_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5070921, y: 0.17730427}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8eee8603e820fac4e9fba681eda450f3
-      internalID: -295554546
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jorgette-idle_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 64
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.50000024, y: 0.1737585}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c31141c8250d77b4ba27c1dfb8bb8405
-      internalID: 589368706
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jorgette-idle_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.50709224, y: 0.14539003}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a707e0d8494d0ed448af2a446d8ec728
-      internalID: -468369868
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jorgette-idle_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 64
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.49645352, y: 0.1453898}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 979546d118179cd49bd922d8ca4489c9
-      internalID: -74745179
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jorgette-idle_4
+      name: pixilart-sprite (2)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -189,20 +105,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 9
-      pivot: {x: 0.49645373, y: 0.16666663}
+      pivot: {x: 0.5, y: 0.177}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee5435a7363e0cb4e84b0a49dd59b2ef
-      internalID: 365948078
+      spriteID: 04a60b22cf2d931419ff4f209c9f1823
+      internalID: -1156526032
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jorgette-idle_5
+      name: pixilart-sprite (2)_1
       rect:
         serializedVersion: 2
         x: 32
@@ -210,20 +126,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 9
-      pivot: {x: 0.49290764, y: 0.15957451}
+      pivot: {x: 0.5, y: 0.177}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e585365d8874ab54184764d2d78a01ba
-      internalID: -864902410
+      spriteID: fa1ac75e784b25a4a89b3c6a66e0aefe
+      internalID: 1019072736
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jorgette-idle_6
+      name: pixilart-sprite (2)_2
       rect:
         serializedVersion: 2
         x: 64
@@ -231,20 +147,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 9
-      pivot: {x: 0.49645376, y: 0.16666675}
+      pivot: {x: 0.5, y: 0.177}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26e67a991e32192429be14e40e687c70
-      internalID: 2142870921
+      spriteID: 4c3fd082d5d6420458641eae1b6153ab
+      internalID: -213688095
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jorgette-idle_7
+      name: pixilart-sprite (2)_3
       rect:
         serializedVersion: 2
         x: 96
@@ -252,98 +168,98 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 9
-      pivot: {x: 0.50354576, y: 0.16666651}
+      pivot: {x: 0.5, y: 0.177}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d084a9666b666914798997602a2fcce2
-      internalID: 800498838
+      spriteID: 71d7e134b06bbb44b8e026bee772d2fe
+      internalID: -864286127
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jorgette-idle_8
+      name: pixilart-sprite (2)_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 128
+        y: 32
         width: 32
         height: 32
       alignment: 9
-      pivot: {x: 0.49290767, y: 0.17730495}
+      pivot: {x: 0.5, y: 0.177}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a902d6878fc3bd44a2978d2f6bc2e3d
-      internalID: -65852298
+      spriteID: 87d74f1817faf6640aa00754d3e2aeac
+      internalID: 1402152780
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jorgette-idle_9
+      name: pixilart-sprite (2)_5
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
+        x: 160
+        y: 32
         width: 32
         height: 32
       alignment: 9
-      pivot: {x: 0.49290788, y: 0.17730495}
+      pivot: {x: 0.5, y: 0.177}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50d531a8f6f9cd84cb907e1e3f449d07
-      internalID: 2016853393
+      spriteID: 28d3f9ebaa304384fb11375670eec345
+      internalID: -330219260
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jorgette-idle_10
+      name: pixilart-sprite (2)_6
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
+        x: 192
+        y: 32
         width: 32
         height: 32
       alignment: 9
-      pivot: {x: 0.49999976, y: 0.17021286}
+      pivot: {x: 0.5, y: 0.177}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d3aeb22c12f980b408b07a1f238681fe
-      internalID: -1684675126
+      spriteID: a0ce1be4e5935e34b8aa0e9aa4e14aa2
+      internalID: -1242665551
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jorgette-idle_11
+      name: pixilart-sprite (2)_7
       rect:
         serializedVersion: 2
-        x: 96
-        y: 0
+        x: 224
+        y: 32
         width: 32
         height: 32
       alignment: 9
-      pivot: {x: 0.49290776, y: 0.17375891}
+      pivot: {x: 0.5, y: 0.177}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4dcb47b75c2f9384d8ce1e59f2d9b735
-      internalID: 1738095151
+      spriteID: f573e625fe6b9ce4296b7db959ec51ab
+      internalID: 2129668371
       vertices: []
       indices: 
       edges: []
@@ -359,18 +275,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      jorgette-idle_0: -295554546
-      jorgette-idle_1: 589368706
-      jorgette-idle_10: -1684675126
-      jorgette-idle_11: 1738095151
-      jorgette-idle_2: -468369868
-      jorgette-idle_3: -74745179
-      jorgette-idle_4: 365948078
-      jorgette-idle_5: -864902410
-      jorgette-idle_6: 2142870921
-      jorgette-idle_7: 800498838
-      jorgette-idle_8: -65852298
-      jorgette-idle_9: 2016853393
+      pixilart-sprite (2)_0: -1156526032
+      pixilart-sprite (2)_1: 1019072736
+      pixilart-sprite (2)_2: -213688095
+      pixilart-sprite (2)_3: -864286127
+      pixilart-sprite (2)_4: 1402152780
+      pixilart-sprite (2)_5: -330219260
+      pixilart-sprite (2)_6: -1242665551
+      pixilart-sprite (2)_7: 2129668371
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

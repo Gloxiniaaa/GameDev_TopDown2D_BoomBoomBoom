@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 41442e5a1e907dd4d827a33661931954
+guid: 3814f761819326540acaf7a4b0ef58ac
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,253 +97,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: jorgette-idle_0
+      name: imageedit_10_5695370005_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5070921, y: 0.17730427}
+        x: 5
+        y: 5
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8eee8603e820fac4e9fba681eda450f3
-      internalID: -295554546
+      spriteID: 5ec131fca8bac1848845616095ae68d0
+      internalID: 1131535778
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jorgette-idle_1
+      name: imageedit_10_5695370005_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 64
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.50000024, y: 0.1737585}
+        x: 79
+        y: 7
+        width: 58
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c31141c8250d77b4ba27c1dfb8bb8405
-      internalID: 589368706
+      spriteID: 8ab3f5b14814c73479139edca8b02b41
+      internalID: -1410678395
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jorgette-idle_2
+      name: imageedit_10_5695370005_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.50709224, y: 0.14539003}
+        x: 151
+        y: 7
+        width: 58
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a707e0d8494d0ed448af2a446d8ec728
-      internalID: -468369868
+      spriteID: 7591a4974260a44478d05ee144aa2b10
+      internalID: -190353936
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jorgette-idle_3
+      name: imageedit_10_5695370005_3
       rect:
         serializedVersion: 2
-        x: 96
-        y: 64
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.49645352, y: 0.1453898}
+        x: 227
+        y: 10
+        width: 50
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 979546d118179cd49bd922d8ca4489c9
-      internalID: -74745179
+      spriteID: f0ca515a5469fd141a4e9065f906dc31
+      internalID: -2002917316
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jorgette-idle_4
+      name: imageedit_10_5695370005_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.49645373, y: 0.16666663}
+        x: 298
+        y: 10
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee5435a7363e0cb4e84b0a49dd59b2ef
-      internalID: 365948078
+      spriteID: 43f636692fa81214980b150d35bb30ab
+      internalID: -222223304
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jorgette-idle_5
+      name: imageedit_10_5695370005_5
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.49290764, y: 0.15957451}
+        x: 361
+        y: 1
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e585365d8874ab54184764d2d78a01ba
-      internalID: -864902410
+      spriteID: 6906c74c94b34494aa2d9e5df80d093d
+      internalID: 186153410
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jorgette-idle_6
+      name: imageedit_10_5695370005_6
       rect:
         serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.49645376, y: 0.16666675}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 26e67a991e32192429be14e40e687c70
-      internalID: 2142870921
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jorgette-idle_7
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 32
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.50354576, y: 0.16666651}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d084a9666b666914798997602a2fcce2
-      internalID: 800498838
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jorgette-idle_8
-      rect:
-        serializedVersion: 2
-        x: 0
+        x: 432
         y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.49290767, y: 0.17730495}
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a902d6878fc3bd44a2978d2f6bc2e3d
-      internalID: -65852298
+      spriteID: 98e9bc6f31f72e647a8a32812fb3aed9
+      internalID: -522386297
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jorgette-idle_9
+      name: imageedit_10_5695370005_7
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.49290788, y: 0.17730495}
+        x: 507
+        y: 3
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50d531a8f6f9cd84cb907e1e3f449d07
-      internalID: 2016853393
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jorgette-idle_10
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.49999976, y: 0.17021286}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d3aeb22c12f980b408b07a1f238681fe
-      internalID: -1684675126
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jorgette-idle_11
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.49290776, y: 0.17375891}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4dcb47b75c2f9384d8ce1e59f2d9b735
-      internalID: 1738095151
+      spriteID: 1a727b34474344e4ea8aa29c9fcf38eb
+      internalID: 2084234838
       vertices: []
       indices: 
       edges: []
@@ -359,18 +275,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      jorgette-idle_0: -295554546
-      jorgette-idle_1: 589368706
-      jorgette-idle_10: -1684675126
-      jorgette-idle_11: 1738095151
-      jorgette-idle_2: -468369868
-      jorgette-idle_3: -74745179
-      jorgette-idle_4: 365948078
-      jorgette-idle_5: -864902410
-      jorgette-idle_6: 2142870921
-      jorgette-idle_7: 800498838
-      jorgette-idle_8: -65852298
-      jorgette-idle_9: 2016853393
+      imageedit_10_5695370005_0: 1131535778
+      imageedit_10_5695370005_1: -1410678395
+      imageedit_10_5695370005_2: -190353936
+      imageedit_10_5695370005_3: -2002917316
+      imageedit_10_5695370005_4: -222223304
+      imageedit_10_5695370005_5: 186153410
+      imageedit_10_5695370005_6: -522386297
+      imageedit_10_5695370005_7: 2084234838
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
