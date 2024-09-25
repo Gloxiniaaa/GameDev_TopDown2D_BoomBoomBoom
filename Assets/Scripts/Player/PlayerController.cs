@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-using DG.Tweening;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -36,8 +34,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private AudioGroupSO _hurtSfx;
     [Header("Broadcast on channel:")]
     [SerializeField] private AudioEventChannelSO _sfxChannel;
+    [SerializeField] private VoidEventChannelSO _camShakeChannel;
 
-   
+
 
     private void Awake()
     {
@@ -60,7 +59,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnFire()
     {
-        RaycastHit2D currentCell = Physics2D.Raycast(_cellIndicator.transform.position, _direction, 0.1f, 1<< Constant.SolidLayer);
+        RaycastHit2D currentCell = Physics2D.Raycast(_cellIndicator.transform.position, _direction, 0.1f, 1 << Constant.SolidLayer);
         if (currentCell.collider && currentCell.collider.CompareTag(Constant.BombTag))
         {
             Debug.Log("this cell is already installed a boom");
@@ -122,14 +121,15 @@ public class PlayerController : MonoBehaviour
             if (other.transform.position == _cellIndicator.transform.position)
             {
                 _sfxChannel.RaiseEvent(_hurtSfx);
-                
+                _camShakeChannel.RaiseEvent();
                 Debug.Log("player is damaged by a bomb");
             }
         }
-        if (other.gameObject.layer == 9) {
+        if (other.gameObject.layer == Constant.EnemyAtkLayer)
+        {
             _sfxChannel.RaiseEvent(_hurtSfx);
-                
-                Debug.Log("player is damaged by enemy ATK");
+            _camShakeChannel.RaiseEvent();
+            Debug.Log("player is damaged by enemy ATK");
         }
     }
     private void OnDisable()

@@ -1,14 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+
 public class CamShake : MonoBehaviour
 {
     [SerializeField] Camera _cam;
-   
-    public void Shake(float time, float intensity) {
-        _cam.DOShakePosition(time, intensity);
-        _cam.DOShakeRotation(time, intensity);
+    [SerializeField] private float _duration;
+    [SerializeField] private float _intensity;
+    
+    [Header("Listen on channel:")]
+    [SerializeField] private VoidEventChannelSO _camShakeChannel;
+
+
+    private void OnEnable()
+    {
+        _camShakeChannel.OnEventRaised += Shake;
+    }
+
+    public void Shake() {
+        _cam.DOShakePosition(_duration, _intensity);
+        _cam.DOShakeRotation(_duration, _intensity);
+    }
+
+    private void OnDisable()
+    {
+        _camShakeChannel.OnEventRaised -= Shake;
     }
     
 }

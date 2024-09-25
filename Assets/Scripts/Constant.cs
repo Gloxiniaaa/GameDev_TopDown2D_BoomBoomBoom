@@ -1,4 +1,3 @@
-using UnityEngine;
 
 public class Constant
 {
@@ -13,4 +12,5 @@ public class Constant
     public const int SolidLayer = 3;
     public const int ExplosionLayer = 6;
     public const int ItemLayer = 7;
+    public const int EnemyAtkLayer = 9;
 }

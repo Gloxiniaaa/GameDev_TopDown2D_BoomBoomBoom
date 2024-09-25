@@ -723,6 +723,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _cam: {fileID: 184185942}
+  _duration: 0.1
+  _intensity: 0.5
+  _camShakeChannel: {fileID: 11400000, guid: 2bd0de4eaf06a844ea19bc567a88bc70, type: 2}
 --- !u!1001 &207239048
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2339,10 +2342,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerMain
       objectReference: {fileID: 0}
-    - target: {fileID: 6992360311052235829, guid: 5b4374d6ca74df54db646bf7324e9496, type: 3}
-      propertyPath: _cam
-      value: 
-      objectReference: {fileID: 184185944}
     - target: {fileID: 6992360311052235829, guid: 5b4374d6ca74df54db646bf7324e9496, type: 3}
       propertyPath: _mapGrid
       value: 
