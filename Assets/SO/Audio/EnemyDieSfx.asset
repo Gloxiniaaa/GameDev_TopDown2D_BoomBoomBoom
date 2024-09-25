@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: EnemyDieSfx
   m_EditorClassIdentifier: 
   _audioClips:
-  - {fileID: 8300000, guid: 05f861dc337842d4092429492fe73591, type: 3}
-  Volume: 0.265
+  - {fileID: 8300000, guid: 88305a0f725641844852ec7f986f2b47, type: 3}
+  Volume: 0.5
