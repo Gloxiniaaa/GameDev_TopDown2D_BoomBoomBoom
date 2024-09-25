@@ -4,19 +4,24 @@ using UnityEngine;
 
 public class SlimeEnemy : EnemyBase
 {
-    
+
     [SerializeField] private LayerMask _spikeLayer;
     [SerializeField] private List<GameObject> _atkList;
     private int _listIndex = 0;
-    private void OnEnable() {
-        foreach (GameObject obj in _atkList) {
+
+    [SerializeField] private AudioGroupSO _slimeSfx;
+    private void OnEnable()
+    {
+        foreach (GameObject obj in _atkList)
+        {
             obj.SetActive(false);
         }
     }
     private void Attack()
     {
-       _atkList[_listIndex].transform.position = transform.position;
-       _atkList[_listIndex].SetActive(true);
+        _sfxChannel.RaiseEvent(_slimeSfx);
+        _atkList[_listIndex].transform.position = transform.position;
+        _atkList[_listIndex].SetActive(true);
         _listIndex = (_listIndex + 1) % _atkList.Count;
     }
     protected override void Move(Vector3 newPos)

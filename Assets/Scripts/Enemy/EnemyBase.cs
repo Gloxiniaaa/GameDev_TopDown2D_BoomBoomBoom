@@ -6,7 +6,7 @@ public class EnemyBase : MonoBehaviour
 {
     [SerializeField] private AudioGroupSO _enemyDieSfx;
     [Header("Broadcast on channel:")]
-    [SerializeField] private AudioEventChannelSO _sfxChannel;
+    [SerializeField] protected AudioEventChannelSO _sfxChannel;
     [SerializeField] private VoidEventChannelSO _enemyDeathChannel;
     [SerializeField] protected Rigidbody2D _rb;
     [SerializeField] protected Animator _anim;

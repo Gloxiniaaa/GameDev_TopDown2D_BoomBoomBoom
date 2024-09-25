@@ -911,6 +911,8 @@ MonoBehaviour:
   - {fileID: 1997343806956676797}
   - {fileID: 9205663750299134504}
   - {fileID: 2409224678765980742}
+  _slimeSfx: {fileID: 11400000, guid: 58704fc1bfaad524b9c6e4ed6c99e240, type: 2}
+  _sfxChannel: {fileID: 11400000, guid: 147d38e6949e40b448f56a903cde74bf, type: 2}
 --- !u!1 &8905129719951256463
 GameObject:
   m_ObjectHideFlags: 0
