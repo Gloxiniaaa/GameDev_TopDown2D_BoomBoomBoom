@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviour
     [Header("Broadcast on channel:")]
     [SerializeField] private AudioEventChannelSO _sfxChannel;
 
+   
 
     private void Awake()
     {
@@ -121,8 +122,14 @@ public class PlayerController : MonoBehaviour
             if (other.transform.position == _cellIndicator.transform.position)
             {
                 _sfxChannel.RaiseEvent(_hurtSfx);
+                
                 Debug.Log("player is damaged by a bomb");
             }
+        }
+        if (other.gameObject.layer == 9) {
+            _sfxChannel.RaiseEvent(_hurtSfx);
+                
+                Debug.Log("player is damaged by enemy ATK");
         }
     }
     private void OnDisable()

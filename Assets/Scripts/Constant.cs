@@ -8,6 +8,7 @@ public class Constant
     public const string ExplosionTag = "Explosion";
     public const string DestroyableTag = "Destroyable";
     public const string UntaggedTag = "Untagged";
+    public const string CamTag = "MainCamera";
 
     public const int SolidLayer = 3;
     public const int ExplosionLayer = 6;

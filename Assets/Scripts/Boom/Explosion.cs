@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Explosion : MonoBehaviour
 {
+    private CamShake _cam;
     private void OnEnable()
     {
+        _cam = GameObject.FindGameObjectWithTag(Constant.CamTag).GetComponent<CamShake>();
         Invoke(nameof(Deactivate), 0.3f);
     }
 
@@ -16,6 +18,9 @@ public class Explosion : MonoBehaviour
             // for chain explosion
             FireBall otherBomb = other.GetComponent<FireBall>();
             otherBomb.Explode();
+        }
+        if(other.CompareTag(Constant.PlayerTag) && _cam != null) {
+            _cam.Shake(0.1f, 0.5f);
         }
     }
 
