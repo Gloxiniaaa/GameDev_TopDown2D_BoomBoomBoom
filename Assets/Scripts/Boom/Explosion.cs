@@ -12,7 +12,7 @@ public class Explosion : MonoBehaviour
         if (other.CompareTag(Constant.BombTag))
         {
             // for chain explosion
-            FireBall otherBomb = other.GetComponent<FireBall>();
+            Bomb otherBomb = other.GetComponent<Bomb>();
             otherBomb.Explode();
         }
     }

@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 
-public class FireBall : MonoBehaviour
+public class Bomb : MonoBehaviour
 {
     [SerializeField] private BombAttributeSO _bombAttribute;
     [SerializeField] private AudioGroupSO _explodeSfx;
     private List<GameObject> _explosions;
     private int _explosionIndex = 0;
-
     private bool _isExploded = false;
+    private Sequence _bubbleEffect;
+
 
     [Header("Broadcast on channel:")]
     [SerializeField] private GameObjectEventChannelSO _returnBombToPoolChannel;
@@ -18,17 +19,10 @@ public class FireBall : MonoBehaviour
 
     private void Awake()
     {
-        Initilize();
+        InitilizeExplosions();
     }
 
-    private void OnEnable()
-    {
-        _isExploded = false;
-        BubbleEffect();
-        StartCoroutine(StartCountDown());
-    }
-
-    private void Initilize()
+    private void InitilizeExplosions()
     {
         _explosions = new List<GameObject>(_bombAttribute.Range * 4 + 1);
         for (int i = 0; i < _bombAttribute.Range * 4 + 1; i++)
@@ -39,12 +33,24 @@ public class FireBall : MonoBehaviour
         }
     }
 
-    private void BubbleEffect()
+    private void Start()
     {
-        Sequence sequence = DOTween.Sequence();
-        sequence.Append(transform.DOScaleY(0.9f, 0.2f).SetEase(Ease.InOutQuad));
-        sequence.Append(transform.DOScaleY(1.1f, 0.2f).SetEase(Ease.InOutQuad));
-        sequence.SetLoops(-1, LoopType.Yoyo);
+        SetBubbleEffect();
+    }
+
+    private void SetBubbleEffect()
+    {
+        _bubbleEffect = DOTween.Sequence();
+        _bubbleEffect.Append(transform.DOScaleY(0.9f, 0.2f).SetEase(Ease.InOutQuad));
+        _bubbleEffect.Append(transform.DOScaleY(1.1f, 0.2f).SetEase(Ease.InOutQuad));
+        _bubbleEffect.SetLoops(-1, LoopType.Yoyo);
+    }
+
+    private void OnEnable()
+    {
+        _isExploded = false;
+        _bubbleEffect.Play();
+        StartCoroutine(StartCountDown());
     }
 
     private IEnumerator StartCountDown()
@@ -61,6 +67,16 @@ public class FireBall : MonoBehaviour
 
         _isExploded = true;
 
+        if (_explosions.Count < _bombAttribute.Range * 4)
+        {
+            for (int j = 0; j < 4; j++)
+            {
+                GameObject explosion = Instantiate(_bombAttribute.ExplosionPrefab);
+                explosion.SetActive(false);
+                _explosions.Add(explosion);
+            }
+        }
+
         // center
         _explosions[_explosionIndex].SetActive(true);
         _explosions[_explosionIndex++].transform.position = new Vector2(transform.position.x, transform.position.y);
@@ -68,23 +84,15 @@ public class FireBall : MonoBehaviour
         ExtendExplosion(Vector2.down);
         ExtendExplosion(Vector2.right);
         ExtendExplosion(Vector2.left);
-        AfterExlode();
+
+        // done
+        gameObject.SetActive(false);
     }
 
     private void ExtendExplosion(Vector3 direction)
     {
         for (int i = 0; i < _bombAttribute.Range; i++)
         {
-            if (_explosionIndex < _bombAttribute.Range * 4 + 1)
-            {
-                for (int j = 0; j < 4; j++)
-                {
-                    GameObject explosion = Instantiate(_bombAttribute.ExplosionPrefab);
-                    explosion.SetActive(false);
-                    _explosions.Add(explosion);
-                }
-            }
-
             RaycastHit2D obstacleDetector = Physics2D.Raycast(transform.position + direction * (i + 1), direction, 0.1f, 1 << Constant.SolidLayer);
             if (obstacleDetector.collider)
             {
@@ -103,11 +111,10 @@ public class FireBall : MonoBehaviour
         }
     }
 
-    private void AfterExlode()
+    private void OnDisable()
     {
-        transform.DOKill();
+        _bubbleEffect.Kill();
         _returnBombToPoolChannel.RaiseEvent(gameObject);
         _explosionIndex = 0;
-        gameObject.SetActive(false);
     }
 }
