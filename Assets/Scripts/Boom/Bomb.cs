@@ -67,19 +67,9 @@ public class Bomb : MonoBehaviour
 
         _isExploded = true;
 
-        if (_explosions.Count < _bombAttribute.Range * 4)
-        {
-            for (int j = 0; j < 4; j++)
-            {
-                GameObject explosion = Instantiate(_bombAttribute.ExplosionPrefab);
-                explosion.SetActive(false);
-                _explosions.Add(explosion);
-            }
-        }
-
         // center
-        _explosions[_explosionIndex].SetActive(true);
-        _explosions[_explosionIndex++].transform.position = new Vector2(transform.position.x, transform.position.y);
+        PutExlosionAt(transform.position);
+
         ExtendExplosion(Vector2.up);
         ExtendExplosion(Vector2.down);
         ExtendExplosion(Vector2.right);
@@ -98,22 +88,38 @@ public class Bomb : MonoBehaviour
             {
                 if (obstacleDetector.collider.CompareTag(Constant.DestroyableTag) || obstacleDetector.collider.CompareTag(Constant.BombTag))
                 {
-                    _explosions[_explosionIndex].SetActive(true);
-                    _explosions[_explosionIndex++].transform.position = transform.position + direction * (i + 1);
+                    PutExlosionAt(transform.position + direction * (i + 1));
                 }
                 return;
             }
             else
             {
-                _explosions[_explosionIndex].SetActive(true);
-                _explosions[_explosionIndex++].transform.position = transform.position + direction * (i + 1);
+                PutExlosionAt(transform.position + direction * (i + 1));
             }
         }
     }
 
+    private GameObject PutExlosionAt(Vector3 pos)
+    {
+        GameObject explosion;
+        if (_explosionIndex <= _explosions.Count)
+        {
+            explosion = Instantiate(_bombAttribute.ExplosionPrefab);
+            _explosions.Add(explosion);
+        }
+        else
+        {
+            explosion = _explosions[_explosionIndex];
+            _explosionIndex++;
+            explosion.SetActive(true);
+        }
+        explosion.transform.position = pos;
+        return explosion;
+    }
+
     private void OnDisable()
     {
-        _bubbleEffect.Kill();
+        _bubbleEffect.Pause();
         _returnBombToPoolChannel.RaiseEvent(gameObject);
         _explosionIndex = 0;
     }
