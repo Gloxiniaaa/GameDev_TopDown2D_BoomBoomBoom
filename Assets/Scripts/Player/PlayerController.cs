@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour
     [Header("Broadcast on channel:")]
     [SerializeField] private AudioEventChannelSO _sfxChannel;
     [SerializeField] private VoidEventChannelSO _camShakeChannel;
+    [SerializeField] private IntEventChannelSO _playerGetsHurtChannel;
 
 
 
@@ -122,6 +123,7 @@ public class PlayerController : MonoBehaviour
             {
                 _sfxChannel.RaiseEvent(_hurtSfx);
                 _camShakeChannel.RaiseEvent();
+                _playerGetsHurtChannel.RaiseEvent(10);
                 Debug.Log("player is damaged by a bomb");
             }
         }
@@ -129,6 +131,7 @@ public class PlayerController : MonoBehaviour
         {
             _sfxChannel.RaiseEvent(_hurtSfx);
             _camShakeChannel.RaiseEvent();
+            _playerGetsHurtChannel.RaiseEvent(10);
             Debug.Log("player is damaged by enemy ATK");
         }
     }

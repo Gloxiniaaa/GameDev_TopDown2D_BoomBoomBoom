@@ -14,8 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _initSpeed: 3
   _initBombAmount: 3
+  _initHealth: 50
   BombPrefab: {fileID: 3464010157363128502, guid: 1c8946f2c20de7d4c98633a16202e652, type: 3}
   _updateSpeedUIChannel: {fileID: 11400000, guid: d237936a93e701a4fadaaf2f6f3627cd, type: 2}
   _updateBombAmountUIChannel: {fileID: 11400000, guid: dc3ff3472f080ac47a52ecc96417eb4a, type: 2}
+  _updateHeathUIChannel: {fileID: 11400000, guid: baa7c6ed56424c646abc2e86203b4a07, type: 2}
   _speedupEvent: {fileID: 11400000, guid: b5ae461c9ca6dca4f902e34ebc329368, type: 2}
   _bombAmountUpEvent: {fileID: 11400000, guid: d88473aeb93409842b0443b656e734da, type: 2}
+  _playerGetsHurtChannel: {fileID: 11400000, guid: dc8d397b4915adc449d1ee68c29dfa96, type: 2}

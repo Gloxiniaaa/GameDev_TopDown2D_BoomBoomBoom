@@ -206,6 +206,7 @@ MonoBehaviour:
   _hurtSfx: {fileID: 11400000, guid: 53a7679881af8124480b58c5d1ef8609, type: 2}
   _sfxChannel: {fileID: 11400000, guid: 147d38e6949e40b448f56a903cde74bf, type: 2}
   _camShakeChannel: {fileID: 11400000, guid: 2bd0de4eaf06a844ea19bc567a88bc70, type: 2}
+  _playerGetsHurtChannel: {fileID: 11400000, guid: dc8d397b4915adc449d1ee68c29dfa96, type: 2}
 --- !u!50 &2792573210551440705
 Rigidbody2D:
   serializedVersion: 4
