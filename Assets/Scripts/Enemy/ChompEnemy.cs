@@ -77,11 +77,11 @@ public class ChompEnemy : EnemyBase
         _anim.SetFloat(_idleY, y);
         yield return new WaitForSeconds(4f);
 
+        _anim.SetTrigger(_fly);
         _checkDie = false;
         _isAttacking = false;
-        _anim.SetTrigger(_fly);
-        _sfxChannel.RaiseEvent(_flySfx);
         _isFlying = true;
+        _sfxChannel.RaiseEvent(_flySfx);
     }
     private void ActiveSmokeEffect()
     {
@@ -89,13 +89,13 @@ public class ChompEnemy : EnemyBase
     }
     protected override void OnTriggerEnter2D(Collider2D other)
     {
-        if (!_isFlying)
+        if (_isFlying)
+            return;
+        if (other.gameObject.CompareTag(Constant.ExplosionTag) && _checkDie)
         {
-            if (other.gameObject.CompareTag(Constant.ExplosionTag))
-            {
-                _rb.velocity = Vector3.zero;
-                DieEffect(other.transform.position);
-            }
+            _checkDie = false;
+            _rb.velocity = Vector3.zero;
+            DieEffect(other.transform.position);
         }
     }
 }

@@ -291,6 +291,7 @@ MonoBehaviour:
   _timeToChangeDir: 3
   _timeAttack: 10
   _smokeEffect: {fileID: 5862791059084473418}
+  _flySfx: {fileID: 11400000, guid: dac0e192eeddfd447bde2a0216f9373f, type: 2}
 --- !u!1 &5862791059084473418
 GameObject:
   m_ObjectHideFlags: 0
