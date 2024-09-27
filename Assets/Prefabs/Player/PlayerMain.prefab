@@ -30,9 +30,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1241955521310429117}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.4369631, y: -1.8497025, z: 0.06740667}
-  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 459608333270944776}
@@ -207,6 +207,7 @@ MonoBehaviour:
   _sfxChannel: {fileID: 11400000, guid: 147d38e6949e40b448f56a903cde74bf, type: 2}
   _camShakeChannel: {fileID: 11400000, guid: 2bd0de4eaf06a844ea19bc567a88bc70, type: 2}
   _playerGetsHurtChannel: {fileID: 11400000, guid: dc8d397b4915adc449d1ee68c29dfa96, type: 2}
+  _playerDeathChannel: {fileID: 11400000, guid: c6b7818c304d06c4d9f6d7eaa940bb1a, type: 2}
 --- !u!50 &2792573210551440705
 Rigidbody2D:
   serializedVersion: 4
@@ -292,8 +293,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1705994136384975392}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.4769632, y: -1.8497025, z: 0.06740667}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

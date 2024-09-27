@@ -15,4 +15,13 @@ public class Destroyable : MonoBehaviour
         }
     }
 
+    private void OnDrawGizmos()
+    {
+        if (_hiddenItem)
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawLine(transform.position, transform.position + Vector3.up);
+        }
+    }
+
 }

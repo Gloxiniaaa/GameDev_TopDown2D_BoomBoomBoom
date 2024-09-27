@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4621571005907370508}
   - component: {fileID: 5880675849362334240}
+  - component: {fileID: 1694208839422943409}
   m_Layer: 3
   m_Name: Bornfire
   m_TagString: BornFire
@@ -78,6 +79,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1694208839422943409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6385786299596788671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82f64b4bd4cd0a247889c7fa0da3b7b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemy: {fileID: 6050182288098794005, guid: 578adef2ab8084043aa8fb76bf3b6cb6, type: 3}
+  _cdTime: 0
 --- !u!1 &8681974572169111102
 GameObject:
   m_ObjectHideFlags: 0

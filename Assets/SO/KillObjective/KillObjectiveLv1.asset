@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: KillObjectiveLv1
   m_EditorClassIdentifier: 
   description: How many enemies player has to kill to pass the level
-  _initialValue: 15
+  _initialValue: 10
   _resetOnEnable: 1
   OnValueChanged: {fileID: 11400000, guid: 1aea43bb765520246a44119a9f71834e, type: 2}

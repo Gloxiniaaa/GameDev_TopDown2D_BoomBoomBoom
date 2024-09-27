@@ -1,18 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private GameObject _enemy;
-    private Coroutine _cur = null;
+    [SerializeField] private float _cdTime;
 
-    private void OnEnable() {
-        InvokeRepeating(nameof(SpawnEnemy), 1, 10f);
+    private void OnEnable()
+    {
+        InvokeRepeating(nameof(SpawnEnemy), 1, _cdTime);
     }
-    private void SpawnEnemy() {
-        Instantiate(_enemy,transform.position, Quaternion.identity);
-    }
-    
 
+    private void SpawnEnemy()
+    {
+        Instantiate(_enemy, transform.position, Quaternion.identity);
+    }
 }

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Clock
   m_EditorClassIdentifier: 
   description: countdown clock, value is in seconds
-  _initialValue: 100
+  _initialValue: 120
   _resetOnEnable: 1
   OnValueChanged: {fileID: 11400000, guid: 64dfe9c030612c0459ba30d70fdfc777, type: 2}
