@@ -40,7 +40,7 @@ public class PlayerAttributeSO : ScriptableObject
     private void IncreaseSpeed(float amount)
     {
         Speed += amount;
-        int scaleSpeed = (int)((Speed - _initSpeed) / amount);
+        int scaleSpeed = (int)Speed + (int)((Speed - _initSpeed) / amount);
         _updateSpeedUIChannel.RaiseEvent(scaleSpeed);
     }
 

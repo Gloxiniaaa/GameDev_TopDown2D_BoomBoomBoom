@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 499d800760872464baeaa47f2852709d, type: 3}
   m_Name: SpeedupEffectSO
   m_EditorClassIdentifier: 
-  _amountPerIncrease: 0.5
+  _amountPerIncrease: 0.25
   _speedupEvent: {fileID: 11400000, guid: b5ae461c9ca6dca4f902e34ebc329368, type: 2}
