@@ -1435,6 +1435,22 @@ PrefabInstance:
       propertyPath: _hiddenItem
       value: 
       objectReference: {fileID: 7014808258467199679, guid: cbb4ad827718ab04ca30e0c023bcfba9, type: 3}
+    - target: {fileID: 905647817253893385, guid: b837311d1286068428c9816d299c5280, type: 3}
+      propertyPath: _hiddenItems.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 905647817253893385, guid: b837311d1286068428c9816d299c5280, type: 3}
+      propertyPath: _hiddenItems.Array.data[0]
+      value: 
+      objectReference: {fileID: 7014808258467199679, guid: cbb4ad827718ab04ca30e0c023bcfba9, type: 3}
+    - target: {fileID: 905647817253893385, guid: b837311d1286068428c9816d299c5280, type: 3}
+      propertyPath: _hiddenItems.Array.data[1]
+      value: 
+      objectReference: {fileID: 4060944087206860367, guid: 33d1814f3cbb87240bd951bb2a92e9b8, type: 3}
+    - target: {fileID: 905647817253893385, guid: b837311d1286068428c9816d299c5280, type: 3}
+      propertyPath: _hiddenItems.Array.data[2]
+      value: 
+      objectReference: {fileID: 7808498578270972796, guid: 155b214f87ce2e14988a9331399ec001, type: 3}
     - target: {fileID: 5412853909405353707, guid: b837311d1286068428c9816d299c5280, type: 3}
       propertyPath: m_Name
       value: Bush (1)
@@ -1497,10 +1513,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1511132547}
     m_Modifications:
-    - target: {fileID: 3164624165138376169, guid: 0954f8ffbe1451e4d8392f796c2112a5, type: 3}
-      propertyPath: _hiddenItem
-      value: 
-      objectReference: {fileID: 7808498578270972796, guid: 155b214f87ce2e14988a9331399ec001, type: 3}
     - target: {fileID: 4577077754435877362, guid: 0954f8ffbe1451e4d8392f796c2112a5, type: 3}
       propertyPath: m_Name
       value: Crate (4)
@@ -1947,11 +1959,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4621571005907370508, guid: 062dee713cfb4054cb860a71b307b3d6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.3515215
+      value: 3.3515215
       objectReference: {fileID: 0}
     - target: {fileID: 4621571005907370508, guid: 062dee713cfb4054cb860a71b307b3d6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.3328607
+      value: 3.6671393
       objectReference: {fileID: 0}
     - target: {fileID: 4621571005907370508, guid: 062dee713cfb4054cb860a71b307b3d6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2203,11 +2215,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8546296740595731785, guid: 0324edaf0564f104290f203836bad424, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.5
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 8546296740595731785, guid: 0324edaf0564f104290f203836bad424, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.5
+      value: -3.5
       objectReference: {fileID: 0}
     - target: {fileID: 8546296740595731785, guid: 0324edaf0564f104290f203836bad424, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3409,6 +3421,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5246658745632135469, guid: c5be13e5518c78144a822b9c5a4576f5, type: 3}
+      propertyPath: _hiddenItems.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5246658745632135469, guid: c5be13e5518c78144a822b9c5a4576f5, type: 3}
+      propertyPath: _hiddenItems.Array.data[0]
+      value: 
+      objectReference: {fileID: 7014808258467199679, guid: cbb4ad827718ab04ca30e0c023bcfba9, type: 3}
+    - target: {fileID: 5246658745632135469, guid: c5be13e5518c78144a822b9c5a4576f5, type: 3}
+      propertyPath: _hiddenItems.Array.data[1]
+      value: 
+      objectReference: {fileID: 4060944087206860367, guid: 33d1814f3cbb87240bd951bb2a92e9b8, type: 3}
+    - target: {fileID: 5246658745632135469, guid: c5be13e5518c78144a822b9c5a4576f5, type: 3}
+      propertyPath: _hiddenItems.Array.data[2]
+      value: 
+      objectReference: {fileID: 7808498578270972796, guid: 155b214f87ce2e14988a9331399ec001, type: 3}
     - target: {fileID: 8192071725549669132, guid: c5be13e5518c78144a822b9c5a4576f5, type: 3}
       propertyPath: m_Name
       value: Crate
@@ -4590,7 +4618,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1694208839422943409, guid: 062dee713cfb4054cb860a71b307b3d6, type: 3}
       propertyPath: _cdTime
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1694208839422943409, guid: 062dee713cfb4054cb860a71b307b3d6, type: 3}
       propertyPath: _startTime
@@ -6887,10 +6915,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1511132547}
     m_Modifications:
-    - target: {fileID: 905647817253893385, guid: b837311d1286068428c9816d299c5280, type: 3}
-      propertyPath: _hiddenItem
-      value: 
-      objectReference: {fileID: 7014808258467199679, guid: cbb4ad827718ab04ca30e0c023bcfba9, type: 3}
     - target: {fileID: 5412853909405353707, guid: b837311d1286068428c9816d299c5280, type: 3}
       propertyPath: m_Name
       value: Bush (1)
@@ -7616,6 +7640,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1511132547}
     m_Modifications:
+    - target: {fileID: 905647817253893385, guid: b837311d1286068428c9816d299c5280, type: 3}
+      propertyPath: _hiddenItems.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 905647817253893385, guid: b837311d1286068428c9816d299c5280, type: 3}
+      propertyPath: _hiddenItems.Array.data[0]
+      value: 
+      objectReference: {fileID: 4060944087206860367, guid: 33d1814f3cbb87240bd951bb2a92e9b8, type: 3}
+    - target: {fileID: 905647817253893385, guid: b837311d1286068428c9816d299c5280, type: 3}
+      propertyPath: _hiddenItems.Array.data[1]
+      value: 
+      objectReference: {fileID: 7014808258467199679, guid: cbb4ad827718ab04ca30e0c023bcfba9, type: 3}
+    - target: {fileID: 905647817253893385, guid: b837311d1286068428c9816d299c5280, type: 3}
+      propertyPath: _hiddenItems.Array.data[2]
+      value: 
+      objectReference: {fileID: 7808498578270972796, guid: 155b214f87ce2e14988a9331399ec001, type: 3}
     - target: {fileID: 5412853909405353707, guid: b837311d1286068428c9816d299c5280, type: 3}
       propertyPath: m_Name
       value: Bush (12)
@@ -7818,6 +7858,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1511132547}
     m_Modifications:
+    - target: {fileID: 660675045156058362, guid: 0d08fac38fbc55e47b0b5938af26e3e8, type: 3}
+      propertyPath: _hiddenItems.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 660675045156058362, guid: 0d08fac38fbc55e47b0b5938af26e3e8, type: 3}
+      propertyPath: _hiddenItems.Array.data[0]
+      value: 
+      objectReference: {fileID: 4060944087206860367, guid: 33d1814f3cbb87240bd951bb2a92e9b8, type: 3}
+    - target: {fileID: 660675045156058362, guid: 0d08fac38fbc55e47b0b5938af26e3e8, type: 3}
+      propertyPath: _hiddenItems.Array.data[1]
+      value: 
+      objectReference: {fileID: 7014808258467199679, guid: cbb4ad827718ab04ca30e0c023bcfba9, type: 3}
+    - target: {fileID: 660675045156058362, guid: 0d08fac38fbc55e47b0b5938af26e3e8, type: 3}
+      propertyPath: _hiddenItems.Array.data[2]
+      value: 
+      objectReference: {fileID: 7808498578270972796, guid: 155b214f87ce2e14988a9331399ec001, type: 3}
     - target: {fileID: 2306801879560265670, guid: 0d08fac38fbc55e47b0b5938af26e3e8, type: 3}
       propertyPath: m_Name
       value: Crate (10)
