@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -13,6 +14,7 @@ public class PlayerController : MonoBehaviour
     private int _moveAnimId = Animator.StringToHash("move");
     private int _dirXHash = Animator.StringToHash("dirX");
     private int _dirYHash = Animator.StringToHash("dirY");
+    private int _hurtHash = Animator.StringToHash("hurt");
     #endregion
 
     #region attibute
@@ -121,20 +123,25 @@ public class PlayerController : MonoBehaviour
         {
             if (other.transform.position == _cellIndicator.transform.position)
             {
-                _sfxChannel.RaiseEvent(_hurtSfx);
-                _camShakeChannel.RaiseEvent();
-                _playerGetsHurtChannel.RaiseEvent(10);
+                GetsHurt();
                 Debug.Log("player is damaged by a bomb");
             }
         }
-        if (other.gameObject.layer == Constant.EnemyAtkLayer)
+        else if (other.gameObject.layer == Constant.EnemyAtkLayer)
         {
-            _sfxChannel.RaiseEvent(_hurtSfx);
-            _camShakeChannel.RaiseEvent();
-            _playerGetsHurtChannel.RaiseEvent(10);
+            GetsHurt();
             Debug.Log("player is damaged by enemy ATK");
         }
     }
+
+    private void GetsHurt()
+    {
+        _animator.SetTrigger(_hurtHash);
+        _sfxChannel.RaiseEvent(_hurtSfx);
+        _camShakeChannel.RaiseEvent();
+        _playerGetsHurtChannel.RaiseEvent(10);
+    }
+
     private void OnDisable()
     {
         _move.Disable();

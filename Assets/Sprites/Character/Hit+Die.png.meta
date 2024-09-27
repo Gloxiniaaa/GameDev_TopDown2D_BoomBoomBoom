@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -95,7 +95,1015 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Hit+Die_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 115
+        width: 8
+        height: 8
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ad69100270c11e48a944f98df3ee3b8
+      internalID: -431036057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_1
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 115
+        width: 8
+        height: 8
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4c6d39afa96a014fb1209e85bf0269d
+      internalID: -1928631962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_2
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 116
+        width: 8
+        height: 8
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23d623a448a7dc8489039b1897ae479f
+      internalID: -218538449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_3
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 116
+        width: 8
+        height: 8
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7d1d124cd731aa4f8471bf7d68cda81
+      internalID: -777974082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_4
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 115
+        width: 8
+        height: 8
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9906f6db64d11fe4b8df31bd8f0dae62
+      internalID: -1956787772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_5
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 115
+        width: 8
+        height: 8
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 695e0b1a076a91a4a9f5af0348987305
+      internalID: -2134318696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_6
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 115
+        width: 8
+        height: 8
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaec0a4bb342b5943bb2580ff7e2088c
+      internalID: -785184627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_7
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 115
+        width: 8
+        height: 8
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a99a7d1a3d9c7644be8618835b3ad8e
+      internalID: 1216371063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_8
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 95
+        width: 13
+        height: 17
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 271f114431d2a0d4787de2a3c74a1259
+      internalID: -1876379034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_9
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 95
+        width: 12
+        height: 17
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13069aade2cbce849b8ac04a1ea1d8af
+      internalID: -1051790121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_10
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 96
+        width: 13
+        height: 17
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff3403a9bf6ac484eb69d4c807b8170b
+      internalID: -203813330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_11
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 96
+        width: 12
+        height: 17
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e35b9405f0b5af5438af29d2945d326b
+      internalID: 711308375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_12
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 95
+        width: 13
+        height: 17
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78cd3d5e1ca6e5447920e00ace172a1b
+      internalID: -500483091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_13
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 95
+        width: 12
+        height: 17
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3e8dd0300cf3eb429493ee9f7b8a674
+      internalID: -1673246263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_14
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 95
+        width: 13
+        height: 17
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3ed54b55e0a07348b47ce3678cf3fa7
+      internalID: -753953751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_15
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 95
+        width: 12
+        height: 17
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c2a4db4497684a4190e29763531c22c
+      internalID: 1482150888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_16
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 76
+        width: 13
+        height: 17
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f86e660ed61c0e042af85fbf145ca8e5
+      internalID: -1231276379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_17
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 76
+        width: 12
+        height: 17
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d598de8302a1f1841881f60f5ec7e6a1
+      internalID: 2096360081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_18
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 77
+        width: 13
+        height: 17
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aef4830c1111d1f408b257eb0c723e88
+      internalID: 1700302379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_19
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 77
+        width: 12
+        height: 17
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af3b9f9e5e1bbf447876f57338fd4dac
+      internalID: 1850838783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_20
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 76
+        width: 13
+        height: 17
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 983d9f659ecdd8f43b5d18b4c5fce4de
+      internalID: 66504463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_21
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 76
+        width: 12
+        height: 17
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ae4d4e35a01c19448eae7d482e31491
+      internalID: 2091798386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_22
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 76
+        width: 13
+        height: 17
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38bc0a16c44cb3342872fba79d09a329
+      internalID: -932899376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_23
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 76
+        width: 12
+        height: 17
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a260294fafde97545be189e8a41ef2bd
+      internalID: -343722973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_24
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 55
+        width: 13
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd3171093864d26429b2fa385cb2a24d
+      internalID: 698953251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_25
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 56
+        width: 13
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b054da5663b9a0488048e635ebcc4bc
+      internalID: -1975504845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_26
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 55
+        width: 13
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b5dc4a89ab739e4abbbb384bb4d0590
+      internalID: -736777067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_27
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 53
+        width: 12
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d7b64b7aec18d344a9ebde69a12e16b
+      internalID: -1332699593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_28
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 53
+        width: 13
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94d54ae2553dc6b4ea716f7096e4cd35
+      internalID: 1068335263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_29
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 53
+        width: 12
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce04db6a485172c4abfe4eda4c2b13fb
+      internalID: 1929176830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_30
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 52
+        width: 13
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be47acdd69b27144584943b11d25eb95
+      internalID: 1961958385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_31
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 53
+        width: 13
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1d151e2a0bf8dd44add188adb138cd3
+      internalID: 36979089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_32
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 34
+        width: 13
+        height: 15
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1343f84c52bd66f4a99ab29f94afb33b
+      internalID: 1742294195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_33
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 34
+        width: 14
+        height: 15
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 651e29d75a2789f409492a5ef628c7ef
+      internalID: -1092227572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_34
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 35
+        width: 14
+        height: 14
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d16fd427f9f196c4cbb0fed0466d81ae
+      internalID: 2123989006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_35
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 32
+        width: 13
+        height: 15
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec68837d431179a43bf209932316533a
+      internalID: -891051161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_36
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 32
+        width: 14
+        height: 14
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cff614aba4e948646bd1a8f7522cac51
+      internalID: 1199789885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_37
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 31
+        width: 13
+        height: 15
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6f2620018bf6fd4581fec20df5d9282
+      internalID: -700371759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_38
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 32
+        width: 14
+        height: 14
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26db88259ca3d83459028584a381c882
+      internalID: -1226170720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_39
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 31
+        width: 14
+        height: 15
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e288f835a978d264194a37e40a6d86a3
+      internalID: -2025206967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_40
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 14
+        width: 14
+        height: 12
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 008548f3fd1b78e4ba82099f56e6d84b
+      internalID: 1347339901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_41
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 14
+        width: 17
+        height: 12
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6cfaeb8ce3d51f498c4a99e1985f7e2
+      internalID: -618414316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_42
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 14
+        width: 19
+        height: 12
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d3b35f149b077f4a81d9627ac059acb
+      internalID: -588288839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_43
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 11
+        width: 17
+        height: 12
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6905d125bcbc4c44cb2fecd5da5ed522
+      internalID: -437906268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_44
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 11
+        width: 15
+        height: 12
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1da295d852e5969448724f4bad36f092
+      internalID: 1511841910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_45
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 11
+        width: 17
+        height: 12
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4c322ae8ad43c549a6d3d0fcc09246f
+      internalID: 213413029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_46
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 11
+        width: 19
+        height: 12
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60e22febc02dafd4ab312738fc775440
+      internalID: 1254207663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit+Die_47
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 11
+        width: 17
+        height: 12
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77881092ed8142d4a835e5074524ebf0
+      internalID: -764922037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -106,7 +1114,55 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Hit+Die_0: -431036057
+      Hit+Die_1: -1928631962
+      Hit+Die_10: -203813330
+      Hit+Die_11: 711308375
+      Hit+Die_12: -500483091
+      Hit+Die_13: -1673246263
+      Hit+Die_14: -753953751
+      Hit+Die_15: 1482150888
+      Hit+Die_16: -1231276379
+      Hit+Die_17: 2096360081
+      Hit+Die_18: 1700302379
+      Hit+Die_19: 1850838783
+      Hit+Die_2: -218538449
+      Hit+Die_20: 66504463
+      Hit+Die_21: 2091798386
+      Hit+Die_22: -932899376
+      Hit+Die_23: -343722973
+      Hit+Die_24: 698953251
+      Hit+Die_25: -1975504845
+      Hit+Die_26: -736777067
+      Hit+Die_27: -1332699593
+      Hit+Die_28: 1068335263
+      Hit+Die_29: 1929176830
+      Hit+Die_3: -777974082
+      Hit+Die_30: 1961958385
+      Hit+Die_31: 36979089
+      Hit+Die_32: 1742294195
+      Hit+Die_33: -1092227572
+      Hit+Die_34: 2123989006
+      Hit+Die_35: -891051161
+      Hit+Die_36: 1199789885
+      Hit+Die_37: -700371759
+      Hit+Die_38: -1226170720
+      Hit+Die_39: -2025206967
+      Hit+Die_4: -1956787772
+      Hit+Die_40: 1347339901
+      Hit+Die_41: -618414316
+      Hit+Die_42: -588288839
+      Hit+Die_43: -437906268
+      Hit+Die_44: 1511841910
+      Hit+Die_45: 213413029
+      Hit+Die_46: 1254207663
+      Hit+Die_47: -764922037
+      Hit+Die_5: -2134318696
+      Hit+Die_6: -785184627
+      Hit+Die_7: 1216371063
+      Hit+Die_8: -1876379034
+      Hit+Die_9: -1051790121
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
