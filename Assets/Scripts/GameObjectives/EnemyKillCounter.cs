@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyKillCounter : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class EnemyKillCounter : MonoBehaviour
 
     [Header("Listen on channel:")]
     [SerializeField] private VoidEventChannelSO _enemyDeathChannel;
+
+    [Header("Broadcast on channel:")]
+    [SerializeField] private VoidEventChannelSO _LevelCompleteChannel;
 
 
     private void OnEnable()
@@ -22,7 +26,7 @@ public class EnemyKillCounter : MonoBehaviour
         if (_killCount.Value >= _killObjective.Value)
         {
             Debug.Log("u meet the objective");
-            // win game
+            _LevelCompleteChannel.RaiseEvent();
         }
     }
 

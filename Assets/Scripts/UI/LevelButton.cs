@@ -9,4 +9,14 @@ public class LevelButton : MonoBehaviour
     {
         SceneManager.LoadScene(_sceneName);
     }
+
+    public void ReplayCurrentLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void EnterNextLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
 }
