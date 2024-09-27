@@ -81,9 +81,10 @@ public class Bomb : MonoBehaviour
 
     private void ExtendExplosion(Vector3 direction)
     {
+        int checkLayer = 1 << Constant.SolidLayer | 1 << Constant.ExplosionLayer;
         for (int i = 0; i < _bombAttribute.Range; i++)
         {
-            RaycastHit2D obstacleDetector = Physics2D.Raycast(transform.position + direction * (i + 1), direction, 0.1f, 1 << Constant.SolidLayer);
+            RaycastHit2D obstacleDetector = Physics2D.Raycast(transform.position + direction * (i + 1), direction, 0.1f, checkLayer);
             if (obstacleDetector.collider)
             {
                 if (obstacleDetector.collider.CompareTag(Constant.DestroyableTag) || obstacleDetector.collider.CompareTag(Constant.BombTag))
