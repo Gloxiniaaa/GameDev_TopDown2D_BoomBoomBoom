@@ -32,4 +32,9 @@ public class Item : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void OnDisable()
+    {
+        transform.DOKill();
+    }
 }

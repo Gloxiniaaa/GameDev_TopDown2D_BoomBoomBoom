@@ -24,7 +24,7 @@ public class EnemyBase : MonoBehaviour
     protected bool _checkDie = false;
     private bool _meetBoom = false;
     private Coroutine _curCo = null;
-    
+
 
     private void Awake()
     {
@@ -83,11 +83,12 @@ public class EnemyBase : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(transform.position, _dir, 0.5f, _layer);
         if (hit.collider != null)
         {
-            if (hit.collider.CompareTag(Constant.UntaggedTag) || hit.collider.CompareTag(Constant.DestroyableTag))    
+            if (hit.collider.CompareTag(Constant.UntaggedTag) || hit.collider.CompareTag(Constant.DestroyableTag))
             {
                 _dir = GetRandomDir(_dir);
             }
-            if (!_meetBoom && hit.collider.CompareTag(Constant.BombTag)){
+            if (!_meetBoom && hit.collider.CompareTag(Constant.BombTag))
+            {
                 _dir = GetRandomDir(_dir);
                 _meetBoom = true;
             }
@@ -157,7 +158,11 @@ public class EnemyBase : MonoBehaviour
         Vector3Int _diePos = _grid.WorldToCell(disDirection);
 
         transform.DOMove(Vector3Int.RoundToInt(transform.position) - _grid.GetCellCenterWorld(_diePos), 1f);
-        GetComponent<SpriteRenderer>().DOFade(0, 1f).SetDelay(1f);
+        SpriteRenderer sr = GetComponent<SpriteRenderer>() as SpriteRenderer;
+        if (sr)
+        {
+            GetComponent<SpriteRenderer>().DOFade(0, 1f).SetDelay(1f);
+        }
 
         int idx = (disDirection.x > 0) ? 1 : 0;
         _anim.SetTrigger(_getDie);
@@ -167,5 +172,10 @@ public class EnemyBase : MonoBehaviour
     private void InactiveAfterDie()
     {
         gameObject.SetActive(false);
+    }
+
+    private void OnDisable()
+    {
+        transform.DOKill();
     }
 }

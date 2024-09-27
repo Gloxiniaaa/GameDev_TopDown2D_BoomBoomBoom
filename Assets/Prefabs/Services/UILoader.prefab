@@ -46,3 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _LevelCompleteChannel: {fileID: 11400000, guid: e55c12db578871d408d197a0b44ddfc5, type: 2}
   _timesupChannel: {fileID: 11400000, guid: 4e224381d8b3cd645bf10cc8acf3dd16, type: 2}
+  _playerDeathChannel: {fileID: 11400000, guid: c6b7818c304d06c4d9f6d7eaa940bb1a, type: 2}
+  _sfxChannel: {fileID: 11400000, guid: 147d38e6949e40b448f56a903cde74bf, type: 2}
+  _victorySfx: {fileID: 11400000, guid: 28235db89e58a1a4d80819ccbc77a3b6, type: 2}

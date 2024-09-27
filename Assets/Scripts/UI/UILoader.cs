@@ -8,6 +8,9 @@ public class UILoader : MonoBehaviour
     [SerializeField] private VoidEventChannelSO _timesupChannel;
     [SerializeField] protected VoidEventChannelSO _playerDeathChannel;
 
+    [Header("Broadcast on channel:")]
+    [SerializeField] private AudioEventChannelSO _sfxChannel;
+    [SerializeField] private AudioGroupSO _victorySfx;
     private void Awake()
     {
         LoadUIScene();
@@ -28,6 +31,7 @@ public class UILoader : MonoBehaviour
 
     private void LoadWinGameUI()
     {
+        _sfxChannel.RaiseEvent(_victorySfx);
         SceneManager.LoadScene("Win", LoadSceneMode.Additive);
         Time.timeScale = 0;
     }
