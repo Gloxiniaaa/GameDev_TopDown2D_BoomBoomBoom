@@ -9298,6 +9298,10 @@ PrefabInstance:
       propertyPath: _mapGrid
       value: 
       objectReference: {fileID: 981004243}
+    - target: {fileID: 6992360311052235829, guid: 5b4374d6ca74df54db646bf7324e9496, type: 3}
+      propertyPath: _playerDeathChannel
+      value: 
+      objectReference: {fileID: 11400000, guid: c6b7818c304d06c4d9f6d7eaa940bb1a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -11,15 +10,17 @@ public class PlayerController : MonoBehaviour
 
     #region  animation
     private Animator _animator;
-    private int _moveAnimId = Animator.StringToHash("move");
+    private int _moveBoolHash = Animator.StringToHash("move");
     private int _dirXHash = Animator.StringToHash("dirX");
     private int _dirYHash = Animator.StringToHash("dirY");
-    private int _hurtHash = Animator.StringToHash("hurt");
+    private int _hurtTriggerHash = Animator.StringToHash("hurt");
+    private int _dieAnimHash = Animator.StringToHash("Die");
     #endregion
 
     #region attibute
     [SerializeField] private PlayerAttributeSO _playerAttribute;
     private Vector3 _direction = Vector3.zero;
+    private bool _isDead = false;
     #endregion
 
     #region grid placement
@@ -38,6 +39,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private AudioEventChannelSO _sfxChannel;
     [SerializeField] private VoidEventChannelSO _camShakeChannel;
     [SerializeField] private IntEventChannelSO _playerGetsHurtChannel;
+    [SerializeField] protected VoidEventChannelSO _playerDeathChannel;
 
 
 
@@ -62,6 +64,9 @@ public class PlayerController : MonoBehaviour
 
     private void OnFire()
     {
+        if (_isDead)
+            return;
+
         RaycastHit2D currentCell = Physics2D.Raycast(_cellIndicator.transform.position, _direction, 0.1f, 1 << Constant.SolidLayer);
         if (currentCell.collider && currentCell.collider.CompareTag(Constant.BombTag))
         {
@@ -73,12 +78,15 @@ public class PlayerController : MonoBehaviour
 
     private void OnMove()
     {
-        _animator.SetBool(_moveAnimId, true);
+        _animator.SetBool(_moveBoolHash, true);
     }
 
 
     private void Move()
     {
+        if (_move == null || _isDead)
+            return;
+
         _direction = _move.ReadValue<Vector2>();
         _direction.Normalize();
         if (_direction != Vector3.zero)
@@ -90,7 +98,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            _animator.SetBool(_moveAnimId, false);
+            _animator.SetBool(_moveBoolHash, false);
         }
     }
 
@@ -136,10 +144,24 @@ public class PlayerController : MonoBehaviour
 
     private void GetsHurt()
     {
-        _animator.SetTrigger(_hurtHash);
+        _animator.SetTrigger(_hurtTriggerHash);
         _sfxChannel.RaiseEvent(_hurtSfx);
         _camShakeChannel.RaiseEvent();
+
+        if (_playerAttribute.Health - 10 <= 0)
+        {
+            Die();
+        }
+
         _playerGetsHurtChannel.RaiseEvent(10);
+    }
+
+    private void Die()
+    {
+        _isDead = true;
+        _move.Disable();
+        _animator.Play(_dieAnimHash);
+        _playerDeathChannel.RaiseEvent();
     }
 
     private void OnDisable()
