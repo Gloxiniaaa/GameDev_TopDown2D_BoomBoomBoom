@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "PlayerAttribute", menuName = "PlayerAttributeSO", order = 0)]
@@ -20,15 +21,25 @@ public class PlayerAttributeSO : ScriptableObject
     [SerializeField] private FloatEventChannelSO _speedupEvent;
     [SerializeField] private IntEventChannelSO _bombAmountUpEvent;
     [SerializeField] private IntEventChannelSO _playerGetsHurtChannel;
+    [SerializeField] private VoidEventChannelSO _startLevelChannel;
 
     private void OnEnable()
+    {
+
+        _speedupEvent.OnEventRaised += IncreaseSpeed;
+        _bombAmountUpEvent.OnEventRaised += IncreaseBombAmount;
+        _playerGetsHurtChannel.OnEventRaised += DecreaseHealth;
+        _startLevelChannel.OnEventRaised += ResetValue;
+    }
+
+    public void ResetValue()
     {
         Speed = _initSpeed;
         BombAmount = _initBombAmount;
         Health = _initHealth;
-        _speedupEvent.OnEventRaised += IncreaseSpeed;
-        _bombAmountUpEvent.OnEventRaised += IncreaseBombAmount;
-        _playerGetsHurtChannel.OnEventRaised += DecreaseHealth;
+        _updateHeathUIChannel.RaiseEvent(Health);
+        _updateSpeedUIChannel.RaiseEvent((int)Speed);
+        _updateBombAmountUIChannel.RaiseEvent(BombAmount);
     }
 
     private void DecreaseHealth(int amount)
@@ -55,5 +66,6 @@ public class PlayerAttributeSO : ScriptableObject
         _speedupEvent.OnEventRaised -= IncreaseSpeed;
         _bombAmountUpEvent.OnEventRaised -= IncreaseBombAmount;
         _playerGetsHurtChannel.OnEventRaised -= DecreaseHealth;
+        _startLevelChannel.OnEventRaised -= ResetValue;
     }
 }

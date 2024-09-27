@@ -40,6 +40,8 @@ public class PlayerAttributeUI : MonoBehaviour
 
     private void InitilizeValue()
     {
+        _playerStats.ResetValue();
+        _bombStats.ResetValue();
         _speedText.text = _playerStats.Speed.ToString();
         _bombAmountText.text = _playerStats.BombAmount.ToString();
         _currentBombAmountText.text = _playerStats.BombAmount.ToString();

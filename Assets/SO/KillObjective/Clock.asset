@@ -16,3 +16,4 @@ MonoBehaviour:
   _initialValue: 120
   _resetOnEnable: 1
   OnValueChanged: {fileID: 11400000, guid: 64dfe9c030612c0459ba30d70fdfc777, type: 2}
+  _startLevelChannel: {fileID: 11400000, guid: a12272d71de572c478d9f5f5993bb3be, type: 2}

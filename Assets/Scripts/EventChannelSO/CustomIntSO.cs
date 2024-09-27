@@ -11,6 +11,10 @@ public class CustomIntSO : DescriptionBaseSO
     [Header("Broadcast on channel:")]
     [SerializeField] private IntEventChannelSO OnValueChanged;
 
+    [Header("Listen on channel:")]
+    [SerializeField] private VoidEventChannelSO _startLevelChannel;
+
+
     private void Awake()
     {
         Value = _initialValue;
@@ -19,6 +23,11 @@ public class CustomIntSO : DescriptionBaseSO
     private void OnEnable()
     {
         OnValueChanged.RaiseEvent(Value);
+        _startLevelChannel.OnEventRaised += Reset;
+    }
+
+    private void Reset()
+    {
         if (_resetOnEnable)
         {
             Value = _initialValue;
@@ -42,5 +51,10 @@ public class CustomIntSO : DescriptionBaseSO
             Value += amount;
             OnValueChanged.RaiseEvent(Value);
         }
+    }
+
+    private void OnDisable()
+    {
+        _startLevelChannel.OnEventRaised += Reset;
     }
 }

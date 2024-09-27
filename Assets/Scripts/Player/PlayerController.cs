@@ -39,7 +39,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private AudioEventChannelSO _sfxChannel;
     [SerializeField] private VoidEventChannelSO _camShakeChannel;
     [SerializeField] private IntEventChannelSO _playerGetsHurtChannel;
-    [SerializeField] protected VoidEventChannelSO _playerDeathChannel;
+    [SerializeField] private VoidEventChannelSO _playerDeathChannel;
+    [SerializeField] private VoidEventChannelSO _startLevelChannel;
+    
 
 
 
@@ -47,8 +49,12 @@ public class PlayerController : MonoBehaviour
     {
         _playerControls = new PlayerControls();
         _move = _playerControls.Movement.Move;
-
         _animator = GetComponent<Animator>();
+    }
+
+    private void Start()
+    {
+        _startLevelChannel.RaiseEvent();
     }
 
     private void OnEnable()

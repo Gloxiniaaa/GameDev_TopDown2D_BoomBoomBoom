@@ -222,7 +222,7 @@ MonoBehaviour:
   - {fileID: 7929183323591145607}
   - {fileID: 2005590328389358846}
   - {fileID: 2675871281583012698}
-  _atkRange: {x: 3, y: 3, z: 3}
+  _atkRange: {x: 2, y: 2, z: 2}
   _timeAttack: 10
   _preAtk: {fileID: 7186785511705633303}
 --- !u!50 &1270363061310767949

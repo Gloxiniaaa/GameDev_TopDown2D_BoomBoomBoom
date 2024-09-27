@@ -208,6 +208,7 @@ MonoBehaviour:
   _camShakeChannel: {fileID: 11400000, guid: 2bd0de4eaf06a844ea19bc567a88bc70, type: 2}
   _playerGetsHurtChannel: {fileID: 11400000, guid: dc8d397b4915adc449d1ee68c29dfa96, type: 2}
   _playerDeathChannel: {fileID: 11400000, guid: c6b7818c304d06c4d9f6d7eaa940bb1a, type: 2}
+  _startLevelChannel: {fileID: 11400000, guid: a12272d71de572c478d9f5f5993bb3be, type: 2}
 --- !u!50 &2792573210551440705
 Rigidbody2D:
   serializedVersion: 4

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6459772412791162999}
   - component: {fileID: 6062313622438251893}
   - component: {fileID: 5360974103893156352}
+  - component: {fileID: 4095600552827685559}
   m_Layer: 8
   m_Name: Vomfy
   m_TagString: Untagged
@@ -204,6 +205,20 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   _timeToChangeDir: 3
+--- !u!114 &4095600552827685559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2632604093214586590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13c7f91fba7f0c541822152e9d7b958a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _jumpSfx: {fileID: 11400000, guid: cbfd908b3f4c7374dbdd6ebcffc1f815, type: 2}
+  _sfxChannel: {fileID: 11400000, guid: 147d38e6949e40b448f56a903cde74bf, type: 2}
 --- !u!1 &6088590198408546567
 GameObject:
   m_ObjectHideFlags: 0

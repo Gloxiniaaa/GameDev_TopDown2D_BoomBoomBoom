@@ -17,3 +17,4 @@ MonoBehaviour:
   ExplosionPrefab: {fileID: 3690576868184667698, guid: f894d7abb8f6ad64c88b49c460633205, type: 3}
   _updateBombRangeUIChannel: {fileID: 11400000, guid: d16ba9ef3a3fd7a489fb0625b9f4d6c8, type: 2}
   _bombRangeUpEvent: {fileID: 11400000, guid: 6cffc8533026eb744b4144602b44606f, type: 2}
+  _startLevelChannel: {fileID: 11400000, guid: a12272d71de572c478d9f5f5993bb3be, type: 2}
