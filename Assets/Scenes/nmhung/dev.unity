@@ -2936,6 +2936,10 @@ PrefabInstance:
       propertyPath: _cdTime
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 1694208839422943409, guid: 062dee713cfb4054cb860a71b307b3d6, type: 3}
+      propertyPath: _startTime
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4621571005907370508, guid: 062dee713cfb4054cb860a71b307b3d6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.5

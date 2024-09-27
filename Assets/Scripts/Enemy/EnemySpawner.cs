@@ -4,10 +4,10 @@ public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private GameObject _enemy;
     [SerializeField] private float _cdTime;
-
+    [SerializeField] private float _startTime;
     private void OnEnable()
     {
-        InvokeRepeating(nameof(SpawnEnemy), 1, _cdTime);
+        InvokeRepeating(nameof(SpawnEnemy), _startTime, _cdTime);
     }
 
     private void SpawnEnemy()
