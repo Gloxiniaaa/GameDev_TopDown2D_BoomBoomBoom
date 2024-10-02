@@ -110,16 +110,12 @@ public class PlayerController : MonoBehaviour, IBombDamageable
 
     private void IndicateCellPosition()
     {
-        Vector3Int cellPos = _mapGrid.WorldToCell(transform.position);
-        Vector3 offset = Vector2.one * 0.5f;
-        _cellIndicator.transform.position = _mapGrid.CellToWorld(cellPos) + offset;
+        _cellIndicator.transform.position = GridExtensions.MapToGrid(_mapGrid, transform.position);
     }
 
     private bool IsNextCellAvailable()
     {
-        Vector3Int nextCell = _mapGrid.WorldToCell(transform.position + _direction * 0.4f);
-        Vector3 offset = Vector2.one * 0.5f;
-        _nextCell = _mapGrid.CellToWorld(nextCell) + offset;
+        _nextCell = GridExtensions.MapToGrid(_mapGrid, transform.position + _direction * 0.4f);
         Collider2D obstacle = _obstacleDetector.collider;
         if (obstacle)
         {

@@ -6,14 +6,29 @@ public abstract class BaseEnemy : MonoBehaviour, IBombDamageable
     [Header("Broadcast on channel:")]
     [SerializeField] protected AudioEventChannelSO _sfxChannel;
     [SerializeField] protected VoidEventChannelSO _enemyDeathChannel;
-    protected Grid _grid;
+    public Grid Grid { get; protected set; }
+    [HideInInspector] public bool CanBeAttacked = true;
+    public Rigidbody Rb {get; protected set;}
+    [HideInInspector] public Animator Animator { get; protected set; }
+    [HideInInspector] public Vector3 Direction;
+
+
 
     protected void Awake()
     {
-        _grid = GameObject.Find("Grid").GetComponent<Grid>();
+        Grid = GameObject.Find("Grid").GetComponent<Grid>();
+        Animator = GetComponent<Animator>();
     }
-    
+
     public void TakeExplosionDamage(Vector3 pos)
     {
+        Die();
+    }
+
+    private void Die()
+    {
+        _enemyDeathChannel.RaiseEvent();
+        _sfxChannel.RaiseEvent(_enemyDieSfx);
+        Destroy(gameObject);
     }
 }
