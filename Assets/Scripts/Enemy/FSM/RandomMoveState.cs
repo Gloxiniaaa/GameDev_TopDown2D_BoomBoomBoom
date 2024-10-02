@@ -1,13 +1,14 @@
 using UnityEngine;
+using System.Collections;
 
 public class RandomMoveState : EnemyState
 {
     [SerializeField] private float _speed;
+    [SerializeField] private int _duration;
     private Vector3 _nextCell;
     private RaycastHit2D _obstacleDetector => Physics2D.Raycast(_nextCell, _host.Direction, 0.1f, 1 << Constant.SolidLayer);
-    private int _dirXHash = Animator.StringToHash("MoveHori");
-    private int _dirYHash = Animator.StringToHash("MoveVerti");
-    protected int _moveBoolHash = Animator.StringToHash("Move");
+    private static int _dirXHash = Animator.StringToHash("MoveHori");
+    private static int _dirYHash = Animator.StringToHash("MoveVerti");
 
     public override void Do()
     {
@@ -19,41 +20,26 @@ public class RandomMoveState : EnemyState
         }
         else
         {
-            Enter();
+            _host.Direction = GridExtensions.GetRandomDirection();
         }
     }
 
     public override void Enter()
     {
-        _host.Direction = GetRandomDirection();
+        _host.Direction = GridExtensions.GetRandomDirection();
+        StartCoroutine(SelfExit());
     }
 
+    private IEnumerator SelfExit()
+    {
+        yield return new WaitForSeconds(_duration);
+        _host.SwitchState(_nextState);
+    }
 
     private bool IsNextCellAvailable()
     {
         _nextCell = GridExtensions.MapToGrid(_host.Grid, transform.position + _host.Direction * 0.51f);
         return _obstacleDetector.collider == null;
-    }
-
-    private Vector2 GetRandomDirection()
-    {
-        int i = Random.Range(0, 4);
-        if (i == 0)
-        {
-            return Vector2.up;
-        }
-        else if (i == 1)
-        {
-            return Vector2.right;
-        }
-        else if (i == 2)
-        {
-            return Vector2.down;
-        }
-        else
-        {
-            return Vector2.left;
-        }
     }
 
     public override bool Exit()

@@ -13,4 +13,6 @@ public class Constant
     public const int ExplosionLayer = 6;
     public const int ItemLayer = 7;
     public const int EnemyAtkLayer = 9;
+
+    public const float EnemyInitTime = 1.15f;
 }

@@ -2,9 +2,16 @@ using UnityEngine;
 
 public class Chomp : BaseEnemy
 {
-    private EnemyState _state;
-    [SerializeField] private RandomMoveState _randomMoveState;
-    [SerializeField] private FlyState _flyState;
+    [SerializeField] private EnemyState _initialState;
 
+    private void OnEnable()
+    {
+        _state = _initialState;
+        _state.Enter();
+    }
 
+    private void Update()
+    {
+        _state.Do();
+    }
 }
