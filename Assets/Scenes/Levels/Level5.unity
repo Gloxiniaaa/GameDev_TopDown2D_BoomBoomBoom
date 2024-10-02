@@ -2699,6 +2699,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 905647817253893385, guid: b837311d1286068428c9816d299c5280, type: 3}
+      propertyPath: _hiddenItems.Array.data[0]
+      value: 
+      objectReference: {fileID: 7808498578270972796, guid: 155b214f87ce2e14988a9331399ec001, type: 3}
+    - target: {fileID: 905647817253893385, guid: b837311d1286068428c9816d299c5280, type: 3}
       propertyPath: _hiddenItems.Array.data[1]
       value: 
       objectReference: {fileID: 4060944087206860367, guid: 33d1814f3cbb87240bd951bb2a92e9b8, type: 3}

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, IBombDamageable
 {
     #region input
     private PlayerControls _playerControls;
@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private IntEventChannelSO _playerGetsHurtChannel;
     [SerializeField] private VoidEventChannelSO _playerDeathChannel;
     [SerializeField] private VoidEventChannelSO _startLevelChannel;
-    
+
 
 
 
@@ -133,18 +133,19 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag(Constant.ExplosionTag))
-        {
-            if (other.transform.position == _cellIndicator.transform.position)
-            {
-                GetsHurt();
-                Debug.Log("player is damaged by a bomb");
-            }
-        }
-        else if (other.gameObject.layer == Constant.EnemyAtkLayer)
+        if (other.gameObject.layer == Constant.EnemyAtkLayer)
         {
             GetsHurt();
             Debug.Log("player is damaged by enemy ATK");
+        }
+    }
+
+    public void TakeExplosionDamage(Vector3 pos)
+    {
+        if (pos == _cellIndicator.transform.position)
+        {
+            GetsHurt();
+            Debug.Log("player is damaged by a bomb");
         }
     }
 

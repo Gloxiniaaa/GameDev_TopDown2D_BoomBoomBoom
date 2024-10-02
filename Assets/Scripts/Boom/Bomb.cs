@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 
-public class Bomb : MonoBehaviour
+public class Bomb : MonoBehaviour, IBombDamageable
 {
     [SerializeField] private BombAttributeSO _bombAttribute;
     [SerializeField] private AudioGroupSO _explodeSfx;
@@ -60,7 +60,7 @@ public class Bomb : MonoBehaviour
         Explode();
     }
 
-    public void Explode()
+    private void Explode()
     {
         if (_isExploded)
             return;
@@ -116,6 +116,12 @@ public class Bomb : MonoBehaviour
         }
         explosion.transform.position = pos;
         return explosion;
+    }
+
+    public void TakeExplosionDamage(Vector3 pos)
+    {
+        // chain explosion
+        Explode();
     }
 
     private void OnDisable()

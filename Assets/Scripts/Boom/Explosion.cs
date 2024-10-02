@@ -9,11 +9,10 @@ public class Explosion : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag(Constant.BombTag))
+        IBombDamageable destroyable =  other.gameObject.GetComponent<IBombDamageable>() as IBombDamageable;
+        if (destroyable != null)
         {
-            // for chain explosion
-            Bomb otherBomb = other.GetComponent<Bomb>();
-            otherBomb.Explode();
+            destroyable.TakeExplosionDamage(transform.position);
         }
     }
 
