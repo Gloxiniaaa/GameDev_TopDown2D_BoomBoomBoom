@@ -115,7 +115,7 @@ GameObject:
   - component: {fileID: 2819118596294709846}
   - component: {fileID: 7560022349804188969}
   m_Layer: 8
-  m_Name: jorget
+  m_Name: Jorget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -138,6 +138,7 @@ Transform:
   - {fileID: 7308325529364948476}
   - {fileID: 5591330960500905851}
   - {fileID: 6506720119499350403}
+  - {fileID: 1747936787388057265}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7754773729061586221
@@ -297,12 +298,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e35b1569036a57c4fa3a6a6fd30405a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyDieSfx: {fileID: 11400000, guid: 0abc63a59f0c9bf48b489d4a45cf5bfd, type: 2}
-  _sfxChannel: {fileID: 11400000, guid: 147d38e6949e40b448f56a903cde74bf, type: 2}
-  _enemyDeathChannel: {fileID: 11400000, guid: 6b77318afdfcc8147877a159e0634ef9, type: 2}
   CanBeAttacked: 1
   Direction: {x: 0, y: 0, z: 0}
   _initialState: {fileID: 7224681075576162546}
+  _deathState: {fileID: 154744030987778994}
+--- !u!1 &4792075629418578941
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1747936787388057265}
+  - component: {fileID: 154744030987778994}
+  m_Layer: 8
+  m_Name: DeathState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1747936787388057265
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4792075629418578941}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7790085642757497753}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &154744030987778994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4792075629418578941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: febf4d6ca8100b74aa2372ea2c5cdd29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _host: {fileID: 7560022349804188969}
+  _nextState: {fileID: 0}
+  _enemyDieSfx: {fileID: 11400000, guid: 0abc63a59f0c9bf48b489d4a45cf5bfd, type: 2}
+  _sfxChannel: {fileID: 11400000, guid: 147d38e6949e40b448f56a903cde74bf, type: 2}
+  _enemyDeathChannel: {fileID: 11400000, guid: 6b77318afdfcc8147877a159e0634ef9, type: 2}
 --- !u!1 &7347758495476588320
 GameObject:
   m_ObjectHideFlags: 0

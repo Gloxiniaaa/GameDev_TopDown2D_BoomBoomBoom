@@ -5,7 +5,7 @@ public class RandomMoveAndSpawnState : RandomMoveState
 {
     [SerializeField] private GameObject _spike;
     private Queue<GameObject> _spikePool;
-    private Vector2 _previousCrell;
+    private Vector2 _previousCrell = Vector2.zero;
 
     private void Awake()
     {
@@ -18,8 +18,9 @@ public class RandomMoveAndSpawnState : RandomMoveState
         }
     }
 
-    private void OnEnable()
+    public override void Enter()
     {
+        base.Enter();
         _previousCrell = GridExtensions.MapToGrid(_host.Grid, _host.transform.position);
     }
 
@@ -33,6 +34,7 @@ public class RandomMoveAndSpawnState : RandomMoveState
             _previousCrell = currentCell;
         }
     }
+    
     private void SpawnSpike()
     {
         GameObject spikeToSpawn = _spikePool.Peek();

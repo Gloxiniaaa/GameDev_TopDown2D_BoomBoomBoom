@@ -1,5 +1,54 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5152130594711679787
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7401783243108875359}
+  - component: {fileID: 7668901467670818893}
+  m_Layer: 8
+  m_Name: DeathState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7401783243108875359
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5152130594711679787}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.142857, y: -2.142857, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5020690624935111925}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7668901467670818893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5152130594711679787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: febf4d6ca8100b74aa2372ea2c5cdd29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _host: {fileID: 3099765872618258922}
+  _nextState: {fileID: 0}
+  _enemyDieSfx: {fileID: 11400000, guid: 0abc63a59f0c9bf48b489d4a45cf5bfd, type: 2}
+  _sfxChannel: {fileID: 11400000, guid: 147d38e6949e40b448f56a903cde74bf, type: 2}
+  _enemyDeathChannel: {fileID: 11400000, guid: 6b77318afdfcc8147877a159e0634ef9, type: 2}
 --- !u!1 &7099275963246362138
 GameObject:
   m_ObjectHideFlags: 0
@@ -14,7 +63,7 @@ GameObject:
   - component: {fileID: 2244394139848988618}
   - component: {fileID: 5944217951298435914}
   - component: {fileID: 3099765872618258922}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Slime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,6 +85,7 @@ Transform:
   m_Children:
   - {fileID: 5072139266679041600}
   - {fileID: 5661281540344248595}
+  - {fileID: 7401783243108875359}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &405455013956955631
@@ -195,12 +245,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e35b1569036a57c4fa3a6a6fd30405a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyDieSfx: {fileID: 11400000, guid: 0abc63a59f0c9bf48b489d4a45cf5bfd, type: 2}
-  _sfxChannel: {fileID: 11400000, guid: 147d38e6949e40b448f56a903cde74bf, type: 2}
-  _enemyDeathChannel: {fileID: 11400000, guid: 6b77318afdfcc8147877a159e0634ef9, type: 2}
   CanBeAttacked: 1
   Direction: {x: 0, y: 0, z: 0}
   _initialState: {fileID: 3423641000313108438}
+  _deathState: {fileID: 7668901467670818893}
 --- !u!1 &7405349710042439717
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,7 +308,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5072139266679041600}
   - component: {fileID: 3423641000313108438}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: InitState
   m_TagString: Untagged
   m_Icon: {fileID: 0}

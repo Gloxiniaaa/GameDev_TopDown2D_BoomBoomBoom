@@ -44,6 +44,7 @@ public class RandomMoveState : EnemyState
 
     public override bool Exit()
     {
+        StopAllCoroutines();
         return true;
     }
 }

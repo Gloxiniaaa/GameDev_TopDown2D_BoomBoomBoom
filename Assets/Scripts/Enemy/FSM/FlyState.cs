@@ -11,9 +11,9 @@ public class FlyState : EnemyState
 
     private Vector3 _nextCell;
     private RaycastHit2D _obstacleDetector => Physics2D.Raycast(_nextCell, _host.Direction, 0.1f, 1 << Constant.SolidLayer);
-    private int _dirXHash = Animator.StringToHash("MoveHori");
-    private int _dirYHash = Animator.StringToHash("MoveVerti");
-    private int _flyTriggerHash = Animator.StringToHash("Fly");
+    private static int _dirXHash = Animator.StringToHash("MoveHori");
+    private static int _dirYHash = Animator.StringToHash("MoveVerti");
+    private static int _flyTriggerHash = Animator.StringToHash("Fly");
 
     public override void Enter()
     {
@@ -69,6 +69,7 @@ public class FlyState : EnemyState
 
     public override bool Exit()
     {
+        StopAllCoroutines();
         _host.CanBeAttacked = true;
         return true;
     }
