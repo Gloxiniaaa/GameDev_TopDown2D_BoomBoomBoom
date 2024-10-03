@@ -25,6 +25,7 @@ public class LandState : EnemyState
 
     public override bool Exit()
     {
+        StopAllCoroutines();
         return true;
     }
 }

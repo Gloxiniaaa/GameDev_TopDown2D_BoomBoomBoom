@@ -24,12 +24,13 @@ public class DeathState : EnemyState
         _host.CanBeAttacked = false;
         _host.Animator.SetTrigger(_dieTriggerHash);
         _sfxChannel.RaiseEvent(_enemyDieSfx);
-        _host.GetComponent<SpriteRenderer>().DOFade(0, 1f).SetDelay(1f).OnComplete(() => _host.gameObject.SetActive(false));
+        _host.GetComponent<SpriteRenderer>().DOFade(0, 1f).SetDelay(0.5f).OnComplete(() => Exit());
         _enemyDeathChannel.RaiseEvent();
     }
 
     public override bool Exit()
     {
+        _host.gameObject.SetActive(false);
         return true;
     }
 }
