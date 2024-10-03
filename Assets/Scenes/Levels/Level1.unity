@@ -1905,7 +1905,7 @@ PrefabInstance:
     - target: {fileID: 1694208839422943409, guid: 062dee713cfb4054cb860a71b307b3d6, type: 3}
       propertyPath: _enemy
       value: 
-      objectReference: {fileID: 2632604093214586590, guid: 8400a5a40499b1947ba5388e2bc188ce, type: 3}
+      objectReference: {fileID: 2281498516760219367, guid: e3f59c25485b0354086338868ab16156, type: 3}
     - target: {fileID: 1694208839422943409, guid: 062dee713cfb4054cb860a71b307b3d6, type: 3}
       propertyPath: _cdTime
       value: 15
@@ -4522,7 +4522,7 @@ PrefabInstance:
     - target: {fileID: 1694208839422943409, guid: 062dee713cfb4054cb860a71b307b3d6, type: 3}
       propertyPath: _enemy
       value: 
-      objectReference: {fileID: 2632604093214586590, guid: 8400a5a40499b1947ba5388e2bc188ce, type: 3}
+      objectReference: {fileID: 2281498516760219367, guid: e3f59c25485b0354086338868ab16156, type: 3}
     - target: {fileID: 1694208839422943409, guid: 062dee713cfb4054cb860a71b307b3d6, type: 3}
       propertyPath: _cdTime
       value: 15
