@@ -17,11 +17,11 @@ public class InitState : EnemyState
     {
         yield return new WaitForSeconds(Constant.EnemyInitTime);
         _host.SwitchState(_nextState);
-        _host.CanBeAttacked = true;
     }
 
     public override bool Exit()
     {
+        _host.CanBeAttacked = true;
         return true;
     }
 }

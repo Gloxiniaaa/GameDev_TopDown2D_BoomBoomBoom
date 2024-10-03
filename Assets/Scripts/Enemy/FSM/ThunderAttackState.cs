@@ -74,6 +74,7 @@ public class ThunderAttackState : EnemyState
 
     public override bool Exit()
     {
+        StopAllCoroutines();
         _preAttack.SetActive(false);
         return true;
     }
