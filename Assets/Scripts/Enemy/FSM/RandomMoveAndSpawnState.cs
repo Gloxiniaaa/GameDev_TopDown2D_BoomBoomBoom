@@ -1,42 +1,38 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class Slime : BaseEnemy
+public class RandomMoveAndSpawnState : RandomMoveState
 {
-    [SerializeField] private EnemyState _initState;
     [SerializeField] private GameObject _spike;
     private Queue<GameObject> _spikePool;
     private Vector2 _previousCrell;
 
-    private new void Awake()
+    private void Awake()
     {
-        base.Awake();
         _spikePool = new Queue<GameObject>();
         for (int i = 0; i < 5; i++)
         {
             GameObject spike = Instantiate(_spike);
             _spikePool.Enqueue(spike);
+            spike.SetActive(false);
         }
     }
 
     private void OnEnable()
     {
-        _previousCrell = GridExtensions.MapToGrid(Grid, transform.position);
-        _state = _initState;
-        _state.Enter();
+        _previousCrell = GridExtensions.MapToGrid(_host.Grid, _host.transform.position);
     }
 
-    private void Update()
+    public override void Do()
     {
-        _state.Do();
-        Vector2 currentCell = GridExtensions.MapToGrid(Grid, transform.position);
+        base.Do();
+        Vector2 currentCell = GridExtensions.MapToGrid(_host.Grid, _host.transform.position);
         if (_previousCrell != currentCell)
         {
             SpawnSpike();
             _previousCrell = currentCell;
         }
     }
-
     private void SpawnSpike()
     {
         GameObject spikeToSpawn = _spikePool.Peek();

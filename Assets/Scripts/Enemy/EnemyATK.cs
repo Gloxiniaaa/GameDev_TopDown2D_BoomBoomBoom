@@ -11,6 +11,7 @@ public class EnemyATK : MonoBehaviour
     private void Awake()
     {
         _collider = GetComponent<Collider2D>();
+        _collider.enabled = false;
     }
 
     protected virtual void ActivateCollider()

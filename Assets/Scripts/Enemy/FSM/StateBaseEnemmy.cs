@@ -1,12 +1,12 @@
 using UnityEngine;
 
-public class Vomfy : BaseEnemy
+public class StateBaseEnemmy : BaseEnemy
 {
-    [SerializeField] private EnemyState _initState;
+    [SerializeField] private EnemyState _initialState;
 
     private void OnEnable()
     {
-        _state = _initState;
+        _state = _initialState;
         _state.Enter();
     }
 

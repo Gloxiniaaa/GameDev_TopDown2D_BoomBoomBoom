@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2557084233709828147}
   - component: {fileID: 6992360311052235829}
   - component: {fileID: 2792573210551440705}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -245,7 +245,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1041923548974379577}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PlayerMain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -279,7 +279,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8483108127723649179}
   - component: {fileID: 6929751017320080578}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CellIndicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -363,7 +363,7 @@ GameObject:
   m_Component:
   - component: {fileID: 459608333270944776}
   - component: {fileID: 3515056203370490160}
-  m_Layer: 3
+  m_Layer: 10
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -447,7 +447,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3747877967596419966}
   - component: {fileID: 7001272034665426655}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BombBag
   m_TagString: Untagged
   m_Icon: {fileID: 0}

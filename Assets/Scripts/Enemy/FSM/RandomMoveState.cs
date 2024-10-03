@@ -3,8 +3,8 @@ using System.Collections;
 
 public class RandomMoveState : EnemyState
 {
-    [SerializeField] private float _speed;
-    [SerializeField] private int _duration;
+    [SerializeField] protected float _speed;
+    [SerializeField] protected int _duration;
     private Vector3 _nextCell;
     private RaycastHit2D _obstacleDetector => Physics2D.Raycast(_nextCell, _host.Direction, 0.1f, 1 << Constant.SolidLayer);
     private static int _dirXHash = Animator.StringToHash("MoveHori");

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8273742228975433107}
   - component: {fileID: 2244394139848988618}
   - component: {fileID: 5944217951298435914}
-  - component: {fileID: 3222071659137896385}
+  - component: {fileID: 3099765872618258922}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Untagged
@@ -183,7 +183,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &3222071659137896385
+--- !u!114 &3099765872618258922
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -192,17 +192,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 7099275963246362138}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96a0e41cd86dddd49ad53fa44f1813a7, type: 3}
+  m_Script: {fileID: 11500000, guid: e35b1569036a57c4fa3a6a6fd30405a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _enemyDieSfx: {fileID: 11400000, guid: 0abc63a59f0c9bf48b489d4a45cf5bfd, type: 2}
   _sfxChannel: {fileID: 11400000, guid: 147d38e6949e40b448f56a903cde74bf, type: 2}
-  _enemyDeathChannel: {fileID: 11400000, guid: c6b7818c304d06c4d9f6d7eaa940bb1a, type: 2}
+  _enemyDeathChannel: {fileID: 11400000, guid: 6b77318afdfcc8147877a159e0634ef9, type: 2}
   CanBeAttacked: 1
   Direction: {x: 0, y: 0, z: 0}
-  _initState: {fileID: 3423641000313108438}
-  _slimeSfx: {fileID: 11400000, guid: 58704fc1bfaad524b9c6e4ed6c99e240, type: 2}
-  _spike: {fileID: 1678333781625731098, guid: 97b12819ed467784bb9f7646553d4b6c, type: 3}
+  _initialState: {fileID: 3423641000313108438}
 --- !u!1 &7405349710042439717
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,9 +210,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5661281540344248595}
-  - component: {fileID: 4541914277893082932}
+  - component: {fileID: 8485889072143994111}
   m_Layer: 8
-  m_Name: RandomMove
+  m_Name: RandomMoveAndSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -235,7 +233,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5020690624935111925}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4541914277893082932
+--- !u!114 &8485889072143994111
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -244,13 +242,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 7405349710042439717}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1202406a2c14754980c701099ede943, type: 3}
+  m_Script: {fileID: 11500000, guid: a9377c0704d00014fa69601325e4e740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _host: {fileID: 3222071659137896385}
-  _nextState: {fileID: 4541914277893082932}
-  _speed: 2
+  _host: {fileID: 3099765872618258922}
+  _nextState: {fileID: 8485889072143994111}
+  _speed: 1.5
   _duration: 3
+  _spike: {fileID: 1678333781625731098, guid: 97b12819ed467784bb9f7646553d4b6c, type: 3}
 --- !u!1 &7587984558634071880
 GameObject:
   m_ObjectHideFlags: 0
@@ -295,5 +294,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f738f706f59de864bb8bc708e114ed81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _host: {fileID: 3222071659137896385}
-  _nextState: {fileID: 4541914277893082932}
+  _host: {fileID: 3099765872618258922}
+  _nextState: {fileID: 8485889072143994111}

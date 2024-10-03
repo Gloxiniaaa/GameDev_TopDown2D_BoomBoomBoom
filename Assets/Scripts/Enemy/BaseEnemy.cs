@@ -8,7 +8,6 @@ public abstract class BaseEnemy : MonoBehaviour, IBombDamageable
     [SerializeField] protected VoidEventChannelSO _enemyDeathChannel;
     public Grid Grid { get; protected set; }
     [HideInInspector] public bool CanBeAttacked = true;
-    public Rigidbody Rb { get; protected set; }
     [HideInInspector] public Animator Animator { get; protected set; }
     [HideInInspector] public Vector3 Direction;
     protected EnemyState _state;

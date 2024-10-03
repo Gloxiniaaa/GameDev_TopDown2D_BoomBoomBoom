@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 8860535739967490589}
   - component: {fileID: 5482968987009915994}
   - component: {fileID: 3214583569393447829}
-  - component: {fileID: 9059333011704886209}
   - component: {fileID: 9188868103316185828}
+  - component: {fileID: 8330244971900893445}
   m_Layer: 8
   m_Name: Vomfy
   m_TagString: Untagged
@@ -185,24 +185,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &9059333011704886209
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2281498516760219367}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c8169a5ac5dade4387adafe8231c5d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _enemyDieSfx: {fileID: 11400000, guid: 0abc63a59f0c9bf48b489d4a45cf5bfd, type: 2}
-  _sfxChannel: {fileID: 11400000, guid: 147d38e6949e40b448f56a903cde74bf, type: 2}
-  _enemyDeathChannel: {fileID: 11400000, guid: 6b77318afdfcc8147877a159e0634ef9, type: 2}
-  CanBeAttacked: 0
-  Direction: {x: 0, y: 0, z: 0}
-  _initState: {fileID: 7564415970658141201}
 --- !u!114 &9188868103316185828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,6 +199,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _jumpSfx: {fileID: 11400000, guid: cbfd908b3f4c7374dbdd6ebcffc1f815, type: 2}
   _sfxChannel: {fileID: 11400000, guid: 147d38e6949e40b448f56a903cde74bf, type: 2}
+--- !u!114 &8330244971900893445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2281498516760219367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e35b1569036a57c4fa3a6a6fd30405a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemyDieSfx: {fileID: 11400000, guid: 0abc63a59f0c9bf48b489d4a45cf5bfd, type: 2}
+  _sfxChannel: {fileID: 11400000, guid: 147d38e6949e40b448f56a903cde74bf, type: 2}
+  _enemyDeathChannel: {fileID: 11400000, guid: 6b77318afdfcc8147877a159e0634ef9, type: 2}
+  CanBeAttacked: 1
+  Direction: {x: 0, y: 0, z: 0}
+  _initialState: {fileID: 7564415970658141201}
 --- !u!1 &5053612666500847439
 GameObject:
   m_ObjectHideFlags: 0
@@ -261,7 +261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1202406a2c14754980c701099ede943, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _host: {fileID: 9059333011704886209}
+  _host: {fileID: 8330244971900893445}
   _nextState: {fileID: 4205804278614942814}
   _speed: 2
   _duration: 3
@@ -393,5 +393,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f738f706f59de864bb8bc708e114ed81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _host: {fileID: 9059333011704886209}
+  _host: {fileID: 8330244971900893445}
   _nextState: {fileID: 4205804278614942814}
